@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-2">
+    <img id="photo-img" src="../img/avatar/0.jpg" style="width: 120px; height: 120px;     margin: 10px 10px 10px 40px;"/>
+    </div>
+    <div class="col-lg-3">
+        <h2 id="name">Татьяна</h2>
+        <h2 id="fathername">Иванова</h2>
+    </div>
+    <div class="col-lg-6-5" style="    text-align: right;">
+        <button id="logout" class="btn btn-danger">Выход</button>
+        <br>
+        <label>ivanova.login</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 big-card">
+
+            <div class="container" id="ispoln-message">
+                <label id="point-1" class="pointer">
+                    Новости
+                </label>
+                <br>
+                <label id="point-2" class="pointer">
+                    Профиль
+                </label>
+                <br>
+                <label id="point-3" class="pointer">
+                    Все вузы
+                </label>
+                <br>
+                <label id="point-4" class="pointer">
+                    Подписки
+                </label>
+                <br>
+                <label id="point-5" class="pointer">
+                    Настройки
+                </label>
+                <br>
+            </div>
+
+    </div>
+    <div id="cards-main-prodaction" class="col-lg-8-5 big-card">
+        <div id="card-main-new-1" class="card pointer ">
+
+            <div class="row">
+
+                <img src="../img/olimp/3.jfif" style="width: 200px; height: 200px"/>
+
+            <div class="col-lg-7">
+                <p class="font-weight-normal m-text-0">Олимпиада по математике</p>
+                <p class="font-weight-normal m-text-0">Просим к участию математиков всех возрастов и народностей, обещаем, чтобудет очень весело и занимательно! Вы будете решат ьзадачки по... ВНИМАНИЕ... математике!!!! Налетай, торопись, покупай живопись!</p>
+                <p class="font-weight-normal m-text-0">Место: Какая-то аудитория какого-то вуза </p>
+                <p class="font-weight-normal m-text-0">Дата: 12.01.12</p>
+                <p class="font-weight-normal m-text-0">Осталось: 7 дней</p>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div id="card-main-new-2" class="card pointer ">
+
+            <div class="row">
+
+                <img src="../img/olimp/2.jpg" style="width: 200px; height: 200px"/>
+
+                <div class="col-lg-7">
+                    <p class="font-weight-normal m-text-0">Олимпиада по физике</p>
+                    <p class="font-weight-normal m-text-0">Просим к участию физиков всех возрастов и народностей, обещаем, чтобудет очень весело и занимательно! Вы будете решат ьзадачки по... ВНИМАНИЕ... физике!!!! Налетай, торопись, покупай живопись!</p>
+                    <p class="font-weight-normal m-text-0">Место: Какая-то аудитория какого-то вуза </p>
+                    <p class="font-weight-normal m-text-0">Дата: 13.01.12</p>
+                    <p class="font-weight-normal m-text-0">Осталось: 6 дней</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    $("#point-1").click(function () {
+        document.location.href = "schoolboy_main.html";
+    })
+    $("#point-2").click(function () {
+        document.location.href = "../main/schoolboy/profile.html";
+    })
+    $("#point-3").click(function () {
+        document.location.href = "schoolboy_vyz.html";
+    })
+    $("#point-4").click(function () {
+        document.location.href = "schoolboy_subscription.html";
+    })
+    $("#point-5").click(function () {
+        document.location.href = "../main/schoolboy/schoolboy_settings.html";
+    })
+
+    $("#card-main-new-1").click(function () {
+        document.location.href = "schoolboy_olimp1.html";
+    })
+
+    $("#card-main-new-2").click(function () {
+        document.location.href = "schoolboy_olimp2.html";
+    })
+
+    $("#logout").click(function () {
+        document.location.href = "index_last.html";
+    })
+
+</script>
+
+</body>
+</html>

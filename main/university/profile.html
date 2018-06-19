@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<title>E-PORTFOLIO</title>
+<meta charset="UTF-8">
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../css/bootstrap.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../css/w3.css">
+<link rel="stylesheet" href="../../css/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='../../css/familyOpenSans.css'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-margin-left w3-hover-white w3-large w3-theme-d2" ><i class="fa fa-bars"></i></a>
+        <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large  my_news_main" style="margin-left: 15%"><i class="fa fa-book w3-margin-right "></i>E-PORTFOLIO</a>
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Новости"><i class="fa fa-globe"></i></a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_prof_main" title="Профиль"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_setting_main" title="Настройки"><i class="fa fa-cog "></i></a>-->
+
+
+        <button class="btn w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" id="logout"><i class="fas fa-sign-out-alt"></i>Выход</button>
+
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+            <img src="../../img/tmp/photo024.jpg" style="height:40px;width:40px" alt="Avatar">
+        </a>
+    </div>
+</div>
+
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_news_main">Новости</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_prof_main">Профиль</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_setting_main">Настройки</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Profile -->
+            <div class="w3-card w3-round">
+
+                <div class="w3-white">
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_prof_main"><i class="fas fa-university w3-margin-right"></i>Профиль</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_news_main"><i class="far fa-bell w3-margin-right"></i>Оповещения</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_create_event_main"><i class="fas fa-edit w3-margin-right"></i>Создать мероприятие</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_old_event_main"><i class="fas fa-boxes w3-margin-right"></i>Архив мероприятий</button>
+
+                </div>
+
+            </div>
+            <br>
+
+            <!-- End Left Column -->
+        </div>
+
+        <!-- Middle Column -->
+
+
+        <div class="w3-col m9">
+            <div class="w3-row-padding">
+                <div class="w3-col m12">
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container w3-padding">
+                            <img src="../../img/tmp/photo024.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:100px">
+                            <h1>Московский государственный университет имени М.В.Ломоносова</h1>
+                            <a href="edit.html" style="padding-left: 115px">Вернуться к редактированию</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin w3-padding-16"><br>
+
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-row-padding" >
+                        <h4><span class="fas fa-map-marker-alt"></span>  Москва</h4>
+                    </div>
+                    <hr class="forhr">
+                    <div class="w3-row-padding" >
+                        <p>Московский государственный университет имени М. В. Ломоносова — один из старейших и крупнейших классических университетов России, один из центров отечественной науки и культуры, расположенный в Москве.
+
+                            C 1940 года носит имя Михаила Васильевича Ломоносова.
+
+                            Полное наименование — Федеральное государственное бюджетное образовательное учреждение высшего образования «Московский государственный университет имени М. В. Ломоносова». Широко используется аббревиатура «МГУ».
+
+                            Университет включает в себя 15 научно-исследовательских институтов, 43 факультета, более 300 кафедр и 6 филиалов (в их числе пять зарубежных — все в странах СНГ).
+
+                            С 1992 года ректором МГУ является академик Виктор Антонович Садовничий.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin w3-padding-16"><br>
+                <h2>Контакты</h2>
+                <hr class="forhr">
+                    <div class="w3-row-padding" >
+                        <label>Официальный сайт: <a href="https://www.msu.ru">https://www.msu.ru </a></label>
+                    </div>
+                <div class="w3-row-padding" >
+                    <label>Телефон приемной комиссии:  (495) 939-10-00 </label>
+                </div>
+                <div class="w3-row-padding" >
+                    <label>Электронный адрес: info@rector.msu.ru</label>
+                </div>
+                <hr>
+            </div>
+
+            <!-- End Middle Column -->
+        </div>
+
+    </div>
+
+    <!-- End Grid -->
+</div>
+
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+    <h5>Footer</h5>
+</footer>
+
+<script>
+    // Accordion
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme-d1";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        }
+    }
+
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    $("#logout").click(function () {
+        document.location.href = "../../index.html";
+    })
+
+    $(".my_prof_main").click(function () {
+        document.location.href = "edit.html";
+    })
+
+    $(".my_news_main").click(function () {
+        document.location.href = "main.html";
+    })
+    $(".my_create_event_main").click(function () {
+        document.location.href = "new_event.html";
+    })
+
+    $(".my_old_event_main").click(function () {
+        document.location.href = "old_events.html";
+    })
+
+</script>
+
+</body>
+</html> 

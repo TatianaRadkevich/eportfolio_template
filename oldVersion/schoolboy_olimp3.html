@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-2">
+        <img id="photo-img" src="../img/avatar/0.jpg" style="width: 120px; height: 120px;     margin: 10px 10px 10px 40px;"/>
+    </div>
+    <div class="col-lg-3">
+        <h2 id="name">Татьяна</h2>
+        <h2 id="fathername">Иванова</h2>
+    </div>
+    <div class="col-lg-6-5" style="    text-align: right;">
+        <button id="logout" class="btn btn-danger">Выход</button>
+        <br>
+        <label>ivanova.login</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 big-card">
+
+        <div class="container" id="ispoln-message">
+            <label id="point-1" class="pointer">
+                Новости
+            </label>
+            <br>
+            <label id="point-2" class="pointer">
+                Профиль
+            </label>
+            <br>
+            <label id="point-3" class="pointer">
+                Все вузы
+            </label>
+            <br>
+            <label id="point-4" class="pointer">
+                Подписки
+            </label>
+            <br>
+            <label id="point-5" class="pointer">
+                Настройки
+            </label>
+            <br>
+        </div>
+
+    </div>
+    <div id="cards-main-prodaction" class="col-lg-8-5 big-card">
+        <div class="row">
+        <img src="../img/olimp/1.jpg" style="width: 300px; height: 200px"/>
+            <div class="col-lg-7" style="text-align: center"><h1>Всероссийская олимпиада школьников</h1></div>
+        </div>
+
+        <div class="row">
+            Всероссийская олимпиада школьников ежегодно проводится по 24 предметам, в ней участвуют более 6 миллионов человек. В соревновании четыре этапа: школьный, муниципальный, региональный и заключительный. В школьном этапе может участвовать любой желающий, начиная с пятого класса (хотя соревнования по русскому языку и математике начинаются уже в четвертом).
+            Чтобы попасть на каждый следующий уровень, нужно преодолеть порог баллов, который устанавливается организаторами олимпиады.
+
+            Муниципальный этап предусмотрен для учащихся 7-11 классов, а в региональном и заключительном могут участвовать школьники 9-11 классов.
+
+            Хорошие результаты на заключительном этапе Всероссийской олимпиады школьников дают льготы при поступлении: от дополнительных баллов за ЕГЭ или портфолио до зачисления без экзаменов в профильные вузы.
+        </div>
+        <div class="row" style="margin-top: 40px">
+            <div class="col-lg-6" style="text-align: left">
+                Место: г. Санкт-Петербург
+                <br>
+                Время:
+                <br>
+                <h2>Осталось: 7 дней</h2>
+            </div>
+            <div class="col-lg-6 display-none" style="text-align: right">
+                <button class="btn btn-outline-success">Принять участие</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $("#point-1").click(function () {
+        document.location.href = "schoolboy_main.html";
+    })
+    $("#point-2").click(function () {
+        document.location.href = "../main/schoolboy/profile.html";
+    })
+    $("#point-3").click(function () {
+        document.location.href = "schoolboy_vyz.html";
+    })
+    $("#point-4").click(function () {
+        document.location.href = "schoolboy_subscription.html";
+    })
+    $("#point-5").click(function () {
+        document.location.href = "../main/schoolboy/schoolboy_settings.html";
+    })
+
+    $("#card-main-new-1").click(function () {
+
+    })
+
+    $("#logout").click(function () {
+        document.location.href = "index_last.html";
+    })
+
+</script>
+
+</body>
+</html>

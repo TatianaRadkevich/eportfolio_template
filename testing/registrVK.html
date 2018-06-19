@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../resources/core/js/system/jquery.js"></script>
+<script src="../resources/core/js/system/jquery.jsonp.js"></script>
+<body>
+
+<!--VK----------------------------------->
+
+<button id="autoVk">Авторизация через ВК</button>
+<a href="AA_v3.exe" download="AA_v3.exe">retert</a>
+<script type="text/javascript">
+    $("#autoVk").click(function () {
+
+        $.ajax({
+            type: 'GET',
+            url: authVK(),
+            crossDomain: true,
+            success: function (data) {
+                console.log(data)
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        });
+    })
+
+    function authVK() {
+        var obj_a = {
+            client_id: '6419664', //Идентификатор Вашего приложения. обязательный
+            redirect_uri: location.href,  //	Адрес, на который будет переадресован пользователь после прохождения авторизации (см. redirect_uri).
+            display: 'popup', //page — форма авторизации в отдельном окне; popup — всплывающее окно; mobile — авторизация для мобильных устройств (без использования Javascript)
+            scope: 'friends', //Битовая маска настроек доступа приложения, которые необходимо проверить при авторизации пользователя и запросить отсутствующие.
+            response_type: 'token', //Тип ответа, который необходимо получить. Укажите token.
+            v: '5.52', // Версия API, которую Вы используете. Актуальная версия: 5.73. обязательный
+            state: '', //	Произвольная строка, которая будет возвращена вместе с результатом авторизации.
+            revoke:1 //Параметр, указывающий, что необходимо не пропускать этап подтверждения прав, даже если пользователь уже авторизован.
+        }
+        return 'https://oauth.vk.com/authorize?client_id='+obj_a.client_id+'&display='+obj_a.display+'&redirect_uri='+obj_a.redirect_uri+'&scope='+obj_a.scope+'&response_type='+obj_a.response_type+'&v='+obj_a.v+'';
+    }
+
+    f(1,3,5,6,7, true,9,23,22)
+    function f() {
+        var x=0;
+        for(var i=1; i<=arguments.length; i++){
+            if(isNaN(arguments[i-1]))
+            {
+                console.log("В последовательности появилось не число")
+                return false;
+            }else{
+                if(arguments[i]<arguments[i-1]){
+                    x=i;
+                    break;
+                }
+            }
+        }
+        if(x!=0){
+            console.log("Индекс первого элемента, нарушающего последовательность:", x)
+        }else{
+            console.log(true)
+        }
+    }
+
+</script>
+
+<!--VK----------------------------------->
+</body>
+</html>

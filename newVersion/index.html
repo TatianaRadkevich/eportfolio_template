@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<title>E-PORTFOLIO</title>
+<meta charset="UTF-8">
+
+
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/bootstrap-grid.css">
+<link rel="stylesheet" href="../css/bootstrap-reboot.css">
+
+
+<link rel="stylesheet" href="../css/w3.css">
+<link rel="stylesheet" href="../css/familyLato.css">
+<link rel="stylesheet" href="../css/familyMontserrat.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/styles.css">
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    /*.fa-anchor,.fa-coffee {font-size:100px}*/
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-my-blue w3-card w3-right-align w3-large">
+        <!--<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#aa" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>-->
+        <button id="login" data-toggle="modal" class="btn" data-target="#login_modal" style="margin: 5px;">Вход</button>
+        <button id="registration" data-toggle="modal" class="btn"  data-target="#reg_modal" style="margin: 5px;">Регистрация</button>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+       <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>-->
+        <button id="login" data-toggle="modal" data-target="#login_modal">Вход</button>
+        <button id="registration" data-toggle="modal" data-target="#reg_modal">Регистрация</button>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-my-blue w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">E-PORTFOLIO</h1>
+<!--    <p class="w3-xlarge">Template by w3.css</p>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+
+    <div class="w3-content">
+        <div class="w3-center">
+            <div class="row">
+                <div class="col-lg-4">
+                    <i class="my-text-size-big-1 fa fa-id-card my-text-blue"></i>
+                    <br>
+                    <h3>Портфолио</h3>
+                    <h3>123</h3>
+                </div>
+                <div class="col-lg-4">
+            <i class="fa fa-leanpub my-text-blue my-text-size-big-1"></i>
+                    <br>
+                    <h3>Олимпиад</h3>
+                    <h3>311</h3>
+                </div>
+                <div class="col-lg-4">
+            <i class="fa fa-university my-text-blue my-text-size-big-1"></i>
+                    <br>
+                    <h3>Вузов</h3>
+                    <h3>234</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+
+    <div class="w3-content">
+
+        <div class="row">
+            <h1>Список вузов</h1>
+            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1>Призыв к регистрации</h1>
+    <p class="w3-margin w3-xlarge">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+
+    <div class="w3-content">
+
+        <div class="row">
+            <h1>Список открытых олимпиад</h1>
+            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity" >
+    <div class="w3-xlarge w3-padding-32">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fab fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <!--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
+</footer>
+
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+
+
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLongTitle_add"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="login_modal_title">Войти</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="login_modal_body">
+                <label>Введите адрес электронной почты</label>
+                <input class="form-control" id="email_modal_inp_l">
+                <label>Введите пароль</label>
+                <input class="form-control" type="password" id="pass_modal_inp_l">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" id="login_modal_save">Вход
+                </button>
+            </div>
+
+            <div class="modal-content container" style="text-align: left">
+                <label>Войти, используя социальные сети</label>
+                <div class="w3-opacity w3-padding-16" >
+                    <div class="w3-xlarge">
+                        <i class="fab fa-google w3-hover-opacity"></i>
+                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                        <i class="fab fa-vk w3-hover-opacity"></i>
+                        <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+                        <i class="fa fa-instagram w3-hover-opacity"></i>
+                        <i class="fa fa-snapchat w3-hover-opacity"></i>
+                        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                        <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="reg_modal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLongTitle_add"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reg_modal_title">Регистрация</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="reg_modal_body">
+                <label>Введите адрес электронной почты</label>
+                <input class="form-control" id="email_modal_inp_r">
+                <label>Введите пароль</label>
+                <input class="form-control" type="password" id="pass_modal_inp_r">
+                <label>Повторите пароль</label>
+                <input class="form-control" type="password" id="pass2_modal_inp_r">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary"  id="reg_modal_save">Зарегистрироваться
+                </button>
+            </div>
+            <div class="modal-content container" style="text-align: left">
+                <label>Войти, используя социальные сети</label>
+                <div class="w3-opacity w3-padding-16" >
+                    <div class="w3-xlarge">
+                        <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+                        <i class="fa fa-instagram w3-hover-opacity"></i>
+                        <i class="fa fa-snapchat w3-hover-opacity"></i>
+                        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                        <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+                        <i class="fab fa-google w3-hover-opacity"></i>
+                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                        <i class="fab fa-vk w3-hover-opacity"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $("#login_modal_save").click(function () {
+        document.location.href = "../start.html";
+    })
+
+    $("#reg_modal_save").click(function () {
+        var pass1 = $("#pass_modal_inp_r").val();
+        var pass2 = $("#pass2_modal_inp_r").val();
+        if(pass1!=pass2){
+            alert("Пароли не совпадают!")
+        }else{
+            alert("пароли совпадают")
+            document.location.href = "../start.html";
+        }
+    })
+
+</script>
+</body>
+</html>

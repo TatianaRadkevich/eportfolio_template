@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-2">
+        <img id="photo-img" src="../img/avatar/0.jpg" style="width: 120px; height: 120px;     margin: 10px 10px 10px 40px;"/>
+    </div>
+    <div class="col-lg-3">
+        <h2 id="name">Татьяна</h2>
+        <h2 id="fathername">Иванова</h2>
+    </div>
+    <div class="col-lg-6-5" style="    text-align: right;">
+        <button id="logout" class="btn btn-danger">Выход</button>
+        <br>
+        <label>ivanova.login</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 big-card">
+
+        <div class="container" id="ispoln-message">
+            <label id="point-1" class="pointer">
+                Новости
+            </label>
+            <br>
+            <label id="point-2" class="pointer">
+                Профиль
+            </label>
+            <br>
+            <label id="point-3" class="pointer">
+                Все вузы
+            </label>
+            <br>
+            <label id="point-4" class="pointer">
+                Подписки
+            </label>
+            <br>
+            <label id="point-5" class="pointer">
+                Настройки
+            </label>
+            <br>
+        </div>
+
+    </div>
+    <div id="cards-main-prodaction" class="col-lg-8-5 big-card">
+
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#home">Базовая информация</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu1">Образование</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu2">Достижения</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <h3>Базовая информация</h3>
+                <div class="row top-1">
+                <div class="col-lg-3">
+                    <label>Фотография</label>
+                </div>
+                <div class="col-lg-9">
+
+                </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Имя</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="name-prof" class="form-control">
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Фамилия</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="lastname-prof" class="form-control">
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Мобильный</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="tele-prof" class="form-control">
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-1">
+                        <label>Регион</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="region-select"></select>
+                    </div>
+                    <div class="col-lg-1">
+                        <label>Район</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="raion-select"></select>
+                    </div>
+                    <div class="col-lg-1">
+                        <label>Город</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="town-select"></select>
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Год рождения</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <select id="d-prof">
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>
+                        <select id="m-prof">
+                            <option>январь</option>
+                            <option>февраль</option>
+                            <option>март</option>
+                            <option>апрель</option>
+                            <option>май</option>
+                            <option>июнь</option>
+                            <option>июль</option>
+                            <option>август</option>
+                            <option>сентябрь</option>
+                            <option>октябрь</option>
+                            <option>ноябрь</option>
+                            <option>декабрь</option>
+                        </select>
+                        <input id="y-prof"/>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>О себе</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="about-us-prof"></textarea>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>аккаунты в соц сетях</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <label>+Добавить аккаунт</label>
+                    </div>
+                </div>
+            </div>
+            <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Образование</h3>
+                <div class="row top-1">
+                    <div class="col-lg-1">
+                        <label>Регион</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="region-select-obr-0"></select>
+                    </div>
+                    <div class="col-lg-1">
+                        <label>Район</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="raion-select-obr-0"></select>
+                    </div>
+                    <div class="col-lg-1">
+                        <label>Город</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="town-select-obr-0"></select>
+                    </div>
+                </div>
+                <div class="row top-1">
+                        <div class="col-lg-3">
+                            <label>Учреждение образования</label>
+                        </div>
+                        <div class="col-lg-9">
+                            <select class="form-control" id="education-select-0"></select>
+                        </div>
+                    </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Год поступления</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="education-start-select-0"></select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Год окончания</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="education-finish-select-0"></select>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Специализация</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <select class="form-control" id="education-spec-0"></select>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Документ (аттестат)</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <label>+Добавить документ</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="menu2" class="container tab-pane fade"><br>
+                <h3>Достижения</h3>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Название олимпиады/мероприятия/достижения</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input class="form-control" id="name-olimp-select-0">
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Описание</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="description-olimp-0"></textarea>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Год</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input class="form-control" id="olimp-start-0"/>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Результат</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="res-olimp-0"></textarea>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Документ/сертификат/диплом/грамота</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <label>+Добавить документ</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+
+
+    $("#point-1").click(function () {
+        document.location.href = "schoolboy_main.html";
+    })
+    $("#point-2").click(function () {
+        document.location.href = "../main/schoolboy/profile.html";
+    })
+    $("#point-3").click(function () {
+        document.location.href = "schoolboy_vyz.html";
+    })
+    $("#point-4").click(function () {
+        document.location.href = "schoolboy_subscription.html";
+    })
+    $("#point-5").click(function () {
+        document.location.href = "../main/schoolboy/schoolboy_settings.html";
+    })
+
+    $("#card-main-new-1").click(function () {
+
+    })
+
+    $(".img_olimp_profile").mouseover(function () {
+        $(this).addClass("w-12")
+        $(this).addClass("pointer")
+        $(this).removeClass("w-90")
+    })
+
+    $(".img_olimp_profile").mouseout(function () {
+        $(this).addClass("w-90")
+        $(this).removeClass("pointer")
+        $(this).removeClass("w-12")
+    })
+
+    $("#btn_edit_profile").click(function () {
+        document.location.href = "schoolboy_profile_edit.html";
+    })
+
+    $("#logout").click(function () {
+        document.location.href = "index_last.html";
+    })
+</script>
+
+</body>
+</html>

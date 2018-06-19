@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E-PORTFOLIO</title>
+    <meta charset="UTF-8">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+        html, body, h1, h2, h3, h4, h5 {
+            font-family: "Open Sans", sans-serif
+        }
+    </style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-margin-left w3-hover-white w3-large w3-theme-d2"><i
+                class="fa fa-bars"></i></a>
+        <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large  my_news_main" style="margin-left: 15%"><i class="fa fa-book w3-margin-right "></i>E-PORTFOLIO</a>
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Новости"><i class="fa fa-globe"></i></a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_prof_main" title="Профиль"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_setting_main" title="Настройки"><i class="fa fa-cog "></i></a>-->
+
+
+        <button class="btn w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" id="logout">
+            <i class="fas fa-sign-out-alt"></i>Выход
+        </button>
+
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
+           title="My Account">
+            <img src="../../img/tmp/photo024.jpg" style="height:40px;width:40px" alt="Avatar">
+        </a>
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_news_main">Новости</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_prof_main">Профиль</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_setting_main">Настройки</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Accordion -->
+            <div class="w3-card w3-round">
+
+
+                <div class="w3-white">
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_prof_main"><i class="fas fa-university w3-margin-right"></i>Профиль</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_news_main"><i class="far fa-bell w3-margin-right"></i>Оповещения</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_create_event_main"><i class="fas fa-edit w3-margin-right"></i>Создать мероприятие</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_old_event_main"><i class="fas fa-boxes w3-margin-right"></i>Архив мероприятий</button>
+
+                </div>
+
+            </div>
+            <br>
+
+
+        </div>
+
+        <!-- Middle Column -->
+        <div class="w3-col m9">
+
+
+
+            <div class="card-news-portfolio w3-container w3-card w3-white w3-round w3-margin" id="card-main-new-1"><br>
+                <img src="../../img/olimp/1.jpg"  class="w3-left w3-circle w3-margin-right" style="width: 200px"/>
+                <h1>Всероссийская олимпиада школьников</h1>
+                <hr class="w3-clear">
+
+                Всероссийская олимпиада школьников ежегодно проводится по 24 предметам, в ней участвуют более 6 миллионов человек. В соревновании четыре этапа: школьный, муниципальный, региональный и заключительный. В школьном этапе может участвовать любой желающий, начиная с пятого класса (хотя соревнования по русскому языку и математике начинаются уже в четвертом).
+                Чтобы попасть на каждый следующий уровень, нужно преодолеть порог баллов, который устанавливается организаторами олимпиады.
+
+                Муниципальный этап предусмотрен для учащихся 7-11 классов, а в региональном и заключительном могут участвовать школьники 9-11 классов.
+
+                Хорошие результаты на заключительном этапе Всероссийской олимпиады школьников дают льготы при поступлении: от дополнительных баллов за ЕГЭ или портфолио до зачисления без экзаменов в профильные вузы.
+                <hr>
+
+                <table class="w3-table">
+                    <tr>
+                        <th width="10%">
+
+                            <!--<div class="w3-dropdown-click">
+                            <button onclick="animationDropdown('all_users')" class="btn btn-link"><input class="confirm-input-table" type="checkbox">  <span class="fas fa-angle-down"></span> </button>
+                            <div id="all_users" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                                <a href="#" class="w3-bar-item w3-button" id="all_users_checked">Выбрать всех</a>
+                                <a href="#" class="w3-bar-item w3-button" id="remove_users_all">Снять всех</a>
+                            </div>
+
+
+                        </div>-->
+                        <input type="checkbox" class="confirm-input-table main-checkbox" style="margin-left: 13px;">
+                        <th>Участник</th>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type="checkbox" class="confirm-input-table" style="margin-left: 13px;">
+                        </td>
+                        <td><a href="profile1.html">Иванова Татьяна</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="confirm-input-table" style="margin-left: 13px;">
+                        </td>
+                        <td><a href="profile2.html">Смирнов Иван</a></td>
+                    </tr>
+                </table>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="w3-row w3-opacity">
+                            <div class="w3-half">
+                                <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fas fa-check"></i></button>
+                            </div>
+                            <div class="w3-half">
+                                <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-lg-3">
+                <button class="w3-button w3-block w3-green w3-section" id="save_part">Сохранить</button>
+                </div>
+                </div>
+                <hr>
+                <label><strong>Подтверждённые участники</strong></label>
+                <a href="profile3.html"><p>Петрова Александра</p></a>
+                <a href="profile4.html"><p>Коробов Александр</p></a>
+                <hr>
+            </div>
+
+
+            <!-- End Middle Column -->
+        </div>
+
+
+    </div>
+
+    <!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+    <h5>Footer</h5>
+</footer>
+
+
+<script>
+    // Accordion
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme-d1";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        }
+    }
+
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    $("#logout").click(function () {
+        document.location.href = "../../index.html";
+    })
+
+
+    $("#card-main-new-2").click(function () {
+        document.location.href = "olimp_query.html";
+    })
+
+    $("#card-main-new-3").click(function () {
+        document.location.href = "olimp_result.html";
+    })
+
+    $("#card-main-new-4").click(function () {
+        document.location.href = "olimp_ current.html";
+    })
+
+    $(".my_prof_main").click(function () {
+        document.location.href = "edit.html";
+    })
+
+    $(".my_news_main").click(function () {
+        document.location.href = "main.html";
+    })
+
+    $(".my_create_event_main").click(function () {
+        document.location.href = "new_event.html";
+    })
+
+    $(".my_old_event_main").click(function () {
+        document.location.href = "old_events.html";
+    })
+
+    function animationDropdown(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    /*$("#all_users_checked").click(function () {
+        $(".confirm-input-table").prop("checked", true)
+    })
+
+    $("#remove_users_all").click(function () {
+        $(".confirm-input-table").prop("checked", false)
+    })*/
+
+    $(".main-checkbox").change(function () {
+        if($(this).is(':checked')){
+            $(".confirm-input-table").prop("checked", true)
+        }else{
+            $(".confirm-input-table").prop("checked", false)
+        }
+    })
+</script>
+
+</body>
+</html>

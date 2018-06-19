@@ -1,0 +1,123 @@
+schoolboy_olimp1.html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-2">
+        <img id="photo-img" src="../img/avatar/0.jpg" style="width: 120px; height: 120px;     margin: 10px 10px 10px 40px;"/>
+    </div>
+    <div class="col-lg-3">
+        <h2 id="name">Татьяна</h2>
+        <h2 id="fathername">Иванова</h2>
+    </div>
+    <div class="col-lg-6-5" style="    text-align: right;">
+        <button id="logout" class="btn btn-danger">Выход</button>
+        <br>
+        <label>ivanova.login</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 big-card">
+
+        <div class="container" id="ispoln-message">
+            <label id="point-1" class="pointer">
+                Новости
+            </label>
+            <br>
+            <label id="point-2" class="pointer">
+                Профиль
+            </label>
+            <br>
+            <label id="point-3" class="pointer">
+                Все вузы
+            </label>
+            <br>
+            <label id="point-4" class="pointer">
+                Подписки
+            </label>
+            <br>
+            <label id="point-5" class="pointer">
+                Настройки
+            </label>
+            <br>
+        </div>
+
+    </div>
+    <div id="cards-main-prodaction" class="col-lg-8-5 big-card">
+        <div class="row">
+        <img src="../img/olimp/4.jfif" style="width: 200px; height: 200px"/>
+            <div class="col-lg-7" style="text-align: center"><h1>Олимпиада 1</h1></div>
+        </div>
+
+        <div class="row">
+            Полное описание олимпиады. Например:
+            Минская городская интернет-олимпиада по математике проводится с целью выявления и поддержки наиболее способных, одаренных учащихся учреждений общего среднего образования г. Минска. Данное мероприятие организуется государственным учреждением образования "Минский городской институт развития образования" (сокращенно - МГИРО) и проводится в разные сроки:
+
+            для учащихся 5-7 классов
+            для учащихся 8-9 классов
+            Положение и дополнительную информацию об интернет-олимпиаде можно посмотреть на сайте МГИРО по этой ссылке.
+
+            5-7 классы
+            проводится с 2013 года (заочный этап)
+            с 2014 года - также и очный этап
+            к участию в интернет-олимпиаде приглашаются учащиеся 5-8 классов
+            Заключительный тур интернет-олимпиады по математике для 5-7 классов традиционно проводится в конце февраля.
+
+            В текущем учебном году она проводилась 17 февраля 2018 г.
+        </div>
+        <div class="row" style="margin-top: 40px">
+            <div class="col-lg-6" style="text-align: left">
+                Место: БГУИР, 2й корпус, П. Бровки 4, 218 каб.
+                <br>
+                Время: 17.05.2014, 15.00
+                <br>
+                <h2>Осталось 7 дней</h2>
+            </div>
+            <div class="col-lg-6 display-none" style="text-align: right">
+                <button class="btn btn-outline-success">Принять участие</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $("#point-1").click(function () {
+        document.location.href = "schoolboy_main.html";
+    })
+    $("#point-2").click(function () {
+        document.location.href = "../main/schoolboy/profile.html";
+    })
+    $("#point-3").click(function () {
+        document.location.href = "schoolboy_vyz.html";
+    })
+    $("#point-4").click(function () {
+        document.location.href = "schoolboy_subscription.html";
+    })
+    $("#point-5").click(function () {
+        document.location.href = "../main/schoolboy/schoolboy_settings.html";
+    })
+
+    $("#card-main-new-1").click(function () {
+
+    })
+
+    $("#logout").click(function () {
+        document.location.href = "index_last.html";
+    })
+
+
+</script>
+
+</body>
+</html>

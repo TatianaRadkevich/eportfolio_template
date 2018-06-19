@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>E-PORTFOLIO</title>
+        <meta charset="UTF-8">
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <style>
+            html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+        </style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-margin-left w3-hover-white w3-large w3-theme-d2" ><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large  my_news_main" style="margin-left: 15%"><i class="fa fa-book w3-margin-right "></i>E-PORTFOLIO</a>
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Новости"><i class="fa fa-globe"></i></a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_prof_main" title="Профиль"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_setting_main" title="Настройки"><i class="fa fa-cog "></i></a>-->
+
+
+        <button class="btn w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" id="logout"><i class="fas fa-sign-out-alt"></i>Выход</button>
+
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+            <img src="../../img/tmp/avatar5.png" style="height:40px;width:40px" alt="Avatar">
+        </a>
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_news_main">Новости</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_prof_main">Профиль</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_setting_main">Настройки</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Accordion -->
+            <div class="w3-card w3-round">
+
+
+                <div class="w3-white">
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_prof_main"><i class="far fa-edit w3-margin-right"></i> Редактировать портфолио</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_news_main"><i class="far fa-bell w3-margin-right"></i> Оповещения </button>
+                </div>
+
+            </div>
+            <br>
+
+           
+        </div>
+
+        <!-- Middle Column -->
+        <div class="w3-col m9">
+            
+
+            <div class="card-news-portfolio w3-container w3-card w3-white w3-round w3-margin" id="card-main-new-1"><br>
+                <img src="../../img/olimp/8.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:200px">
+                <span class="w3-right w3-opacity">7 дней до окончания</span>
+                <h1>Олимпиада школьников</h1><br>
+                <hr class="w3-clear">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                <hr>
+                <label>Дата: 21.12.2018  17:00</label>
+                <hr>
+                <label>Место: г. Москва, пр-т Мира 16</label>
+                <hr>
+                <!--<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>-->
+                <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-child"></i>  Принять участие</button>
+            </div>
+
+
+
+          
+            <!-- End Middle Column -->
+        </div>
+
+       
+    </div>
+
+    <!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+    <h5>Footer</h5>
+</footer>
+
+
+<script>
+    // Accordion
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme-d1";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        }
+    }
+
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    $("#logout").click(function () {
+        document.location.href = "../../index.html";
+    })
+
+
+    $(".my_prof_main").click(function () {
+        document.location.href = "edit_1.html";
+    })
+
+    $(".my_news_main").click(function () {
+        document.location.href = "main.html";
+    })
+
+    $(".my_setting_main").click(function () {
+        document.location.href = "schoolboy_settings.html";
+    })
+
+    $(".my_all_vyz_main").click(function () {
+        document.location.href = "../../oldVersion/schoolboy_vyz.html";
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<title>E-PORTFOLIO</title>
+<meta charset="UTF-8">
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/jquery.ui.datepicker-ru.js"></script>
+
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../css/bootstrap.css">
+
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../css/w3.css">
+<link rel="stylesheet" href="../../css/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='../../css/familyOpenSans.css'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-margin-left w3-hover-white w3-large w3-theme-d2" ><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large  my_news_main" style="margin-left: 15%"><i class="fa fa-book w3-margin-right "></i>E-PORTFOLIO</a>
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Новости"><i class="fa fa-globe"></i></a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_prof_main" title="Профиль"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_setting_main" title="Настройки"><i class="fa fa-cog "></i></a>-->
+
+
+        <button class="btn w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" id="logout"><i class="fas fa-sign-out-alt"></i>Выход</button>
+
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+            <img src="../../img/tmp/avatar5.png" style="height:40px;width:40px" alt="Avatar">
+        </a>
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_news_main">Новости</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_prof_main">Профиль</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_setting_main">Настройки</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Profile -->
+            <div class="w3-card w3-round">
+
+                <div class="w3-white">
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_prof_main"><i class="fas fa-university w3-margin-right"></i>Профиль</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_news_main"><i class="far fa-bell w3-margin-right"></i>Оповещения</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_create_event_main"><i class="fas fa-edit w3-margin-right"></i>Создать мероприятие</button>
+                    <button class="w3-button w3-block w3-theme-l1 w3-left-align my_old_event_main"><i class="fas fa-boxes w3-margin-right"></i>Архив мероприятий</button>
+
+                </div>
+
+
+            </div>
+         <!--   <br>
+
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container">
+                    <div class="row">
+                        <div class="container" style="text-align: center; padding: 15px">
+                            <button class="btn w3-large" style="height: 100%; white-space: pre-line" id="preview_btn_menu_profile"><span class="w3-xxxlarge fa fa-eye"></span> <br>Предварительный<br>просмотр</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>-->
+            <!-- End Left Column -->
+        </div>
+
+        <!-- Middle Column -->
+
+
+        <div class="w3-col m9">
+            <div class="w3-container w3-card w3-white w3-round w3-margin " id="basic_div_menu_profile"><br>
+                <!--<img src="../../img/tmp/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-right w3-opacity">1 min</span>-->
+
+                   <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Тип мероприятия</label>
+                    </div>
+                    <div class="col-lg-5">
+                        <select id="event_type" class="form-control">
+                            <option id="event_type_opt_1"></option>
+                            <option id="event_type_opt_2">Олимпиада по предмету</option>
+                            <option id="event_type_opt_3">Конкурс</option>
+                            <option id="event_type_opt_4">Соревнование</option>
+                            <option id="event_type_opt_5">Другое (написать)</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 display-none event-dop-div" id="event_subj_div">
+                        <select id="event_subj" class="form-control">
+                            <option></option>
+                            <option>Русский язык</option>
+                            <option>Математика</option>
+                            <option>Обществознание</option>
+                            <option>История</option>
+                            <option>Физика</option>
+                            <option>Биология</option>
+                            <option>Информатика</option>
+                            <option>Химия</option>
+                            <option>Иностранный Язык</option>
+                            <option>Литература</option>
+                            <option>География</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 display-none event-dop-div" id="event_my_div">
+                        <input id="event_my" class="form-control"/>
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Наименование</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="name-prof" class="form-control" value="">
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Логотип</label>
+                    </div>
+                    <div class="col-lg-9">
+
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Регион</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="region-select">
+                            <option></option>
+                            <option>Москва</option>
+                            <option>Московская область</option>
+                            <option>Ненецкий автономный округ</option>
+                            <option>Сахалинская область</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-lg-1">
+                        <label>Город</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="town-select">
+                            <option></option>
+                            <option>Москва</option>
+                            <option>Сочи</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Адрес</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="addr_event" class="form-control" value="">
+                    </div>
+                </div>
+
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Дата</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input id="date_event" class="form-control">
+                    </div>
+                    <div class="col-lg-1">
+                        <label>Время</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input id="time_event" class="form-control">
+                    </div>
+                </div>
+
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Краткое описание олимпиады для участника</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="description_1"></textarea>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Полное описание олимпиады для участника</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="description_2"></textarea>
+                    </div>
+                </div>
+
+                <br>
+                <div class="row top-1">
+                    <div class="col-lg-3" style="text-align: right">
+                        <button class="btn btn-success" id="basic_btn_save_menu_profile">Сохранить</button>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <!-- End Middle Column -->
+        </div>
+
+        <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+    <h5>Footer</h5>
+</footer>
+
+
+<script>
+    // Accordion
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme-d1";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        }
+    }
+
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    $("#logout").click(function () {
+        document.location.href = "../../index.html";
+    })
+
+
+    $("#card-main-new-2").click(function () {
+        document.location.href = "olimp_query.html";
+    })
+
+    $("#card-main-new-3").click(function () {
+        document.location.href = "olimp_result.html";
+    })
+
+    $("#card-main-new-4").click(function () {
+        document.location.href = "olimp_ current.html";
+    })
+
+    $(".my_prof_main").click(function () {
+        document.location.href = "edit.html";
+    })
+
+    $(".my_news_main").click(function () {
+        document.location.href = "main.html";
+    })
+
+    $(".my_create_event_main").click(function () {
+        document.location.href = "new_event.html";
+    })
+
+    $(".my_old_event_main").click(function () {
+        document.location.href = "old_events.html";
+    })
+
+    $("#basic_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("basic_div_menu_profile")
+    })
+
+    $("#edu_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("edu_div_menu_profile")
+    })
+
+    $("#progress_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("progress_div_menu_profile")
+    })
+
+    $("#interesting_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("interesting_div_menu_profile")
+    })
+
+    $("#goal_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("goal_div_menu_profile")
+    })
+
+    $("#settings_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("settings_div_menu_profile")
+    })
+
+    function setAllDivDispNon() {
+        $("#basic_div_menu_profile").addClass("display-none")
+        $("#edu_div_menu_profile").addClass("display-none")
+        $("#goal_div_menu_profile").addClass("display-none")
+        $("#interesting_div_menu_profile").addClass("display-none")
+        $("#progress_div_menu_profile").addClass("display-none")
+        $("#settings_div_menu_profile").addClass("display-none")
+    }
+
+    function removeClassNone(id) {
+        $("#"+id).removeClass("display-none")
+    }
+
+    $("#access_settings").change(function () {
+        if($(this).children(":selected").prop("id").split("_")[3] == "2"){
+            $("#selected_edu_setting").removeClass("display-none")
+        }else{
+            $("#selected_edu_setting").addClass("display-none")
+        }
+    })
+
+    $("#preview_btn_menu_profile").click(function () {
+        document.location.href = "profile.html"
+    })
+
+    $("#event_type").change(function(){
+        var res = $(this).find("option:selected").prop("id").split("_")[3];
+        $(".event-dop-div").addClass("display-none")
+        if(res == "2"){
+            $("#event_subj_div").removeClass("display-none");
+        }else if(res == "5"){
+            $("#event_my_div").removeClass("display-none");
+        }
+    })
+
+    $("#date_event").datepicker($.datepicker.regional["ru"]);
+</script>
+
+</body>
+</html>

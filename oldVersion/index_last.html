@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+<div class="container">
+<div class="row" id="header_main">
+    <div class="col-lg-6">
+    <h1>E-PORTFOLIO</h1>
+    </div>
+    <div class="col-lg-4" style="text-align: right">
+    <button id="login" data-toggle="modal" data-target="#login_modal">Вход</button>
+    <button id="registration" data-toggle="modal" data-target="#reg_modal">Регистрация</button>
+    </div>
+</div>
+<div class="row" id="num_main">
+    <div class="col-lg-4"><label id="portfolio_num_main">123</label> Портфолио</div>
+    <div class="col-lg-4"><label id="univer_num_main">123</label> Вузов</div>
+    <div class="col-lg-4"><label id="olimp_num_main">123</label> Олимпиад</div>
+</div>
+<div class="row" id="description_main">
+    Портфолио школьника – это электронная площадка для формирования школьниками индивидуальной «папки», в которой зафиксирована динамика личных достижений в деятельности обучения и развития, подтверждённая электронными образами  документов за определенный период времени.
+
+    Портфолио школьника (с точки зрения программного решения) — это набор технических клиент-серверных решений: система хранения данных о личных достижениях, мобильные приложения и веб-интерфейсы для просмотра пользователями этих данных, клиентское программное обеспечение и веб-интерфейсы для просмотра университетами и другими авторизованными пользователями (школами, образовательными центрами, властями), а также программное обеспечение, веб-интерфейсы и API для работы с другими сервисами.
+
+</div>
+<div class="row" id="university_main">
+    <h1>Список вузов</h1>
+</div>
+<div class="row" id="description2_main">
+    <h1>Призыв к регистрации</h1>
+</div>
+<div class="row" id="olympiads_main">
+    <h1>Список открытых олимпиад</h1>
+</div>
+<div class="row" id="docs_main">
+    <h1> Политика конфиденциальности</h1>
+</div>
+</div>
+
+
+
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLongTitle_add"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="login_modal_title">Войти</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="login_modal_body">
+                <label>Введите адрес электронной почты</label>
+                <input class="form-control" id="email_modal_inp_l">
+                <label>Введите пароль</label>
+                <input class="form-control" type="password" id="pass_modal_inp_l">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" id="login_modal_save">Вход
+                </button>
+            </div>
+
+            <div class="modal-content container" style="text-align: left">
+                <label>Войти, используя социальные сети</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="reg_modal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLongTitle_add"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reg_modal_title">Регистрация</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="reg_modal_body">
+                <label>Введите адрес электронной почты</label>
+                <input class="form-control" id="email_modal_inp_r">
+                <label>Введите пароль</label>
+                <input class="form-control" type="password" id="pass_modal_inp_r">
+                <label>Повторите пароль</label>
+                <input class="form-control" type="password" id="pass2_modal_inp_r">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary"  id="reg_modal_save">Зарегистрироваться
+                </button>
+            </div>
+            <div class="modal-content container" style="text-align: left">
+                <label>Войти, используя социальные сети</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $("#login_modal_save").click(function () {
+        document.location.href = "../start.html";
+    })
+
+    $("#reg_modal_save").click(function () {
+        var pass1 = $("#pass_modal_inp_r").val();
+        var pass2 = $("#pass2_modal_inp_r").val();
+        if(pass1!=pass2){
+            alert("Пароли не совпадают!")
+        }else{
+            alert("пароли совпадают")
+            document.location.href = "../start.html";
+        }
+    })
+
+</script>
+</body>
+</html>

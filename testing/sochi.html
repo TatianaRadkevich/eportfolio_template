@@ -1,0 +1,1323 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Твой Сочи</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "00a78d8157592c3eb55f96b0a26e25ed"]); _ba.push(["host", "sochiru.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+
+    <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0"/>
+
+    <link rel="apple-touch-icon" sizes="114x114" href="http://sochiru.ru/bitrix/templates/sochi/favicons/apple-touch-icon.png">
+   <!-- <link rel="icon" type="image/png" sizes="32x32" href="http://sochiru.ru/bitrix/templates/sochi/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://sochiru.ru/bitrix/templates/sochi/favicons/favicon-16x16.png">-->
+    <!--<link rel="manifest" href="http://sochiru.ru/bitrix/templates/sochi/favicons/manifest.json">-->
+   <!-- <link rel="mask-icon" href="http://sochiru.ru/bitrix/templates/sochi/favicons/safari-pinned-tab.svg" color="#5bbad5">-->
+    <meta name="theme-color" content="#ffffff">
+
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdpTieqp6C2OW-tXwQiDE0c95N3iizLX4&extension=.js"></script>-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://cdn.mapkit.io/v1/infobox.css" rel="stylesheet" >
+    <!--
+        <script type="text/javascript">!function(){function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))a(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(a(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var c=document.createElement("link");c.href=o,c.rel="stylesheet",c.type="text/css",document.getElementsByTagName("head")[0].appendChild(c),document.cookie="font_css_cache"}}function a(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="_fonts.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();</script>
+    -->
+    <style>
+
+        #page-preloader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #fff;
+            z-index: 100500;
+        }
+
+        #page-preloader .spinner {
+            position: absolute;
+            width: 114px;
+            height: 70px;
+            left: 50%;
+            top: 50%;
+            margin: -35px 0 0 -57px;
+            color: #FFF;
+            text-align: center;
+            /*            display: none; */
+        }
+
+        #page-preloader .spinner img {
+            width: 114px;
+            height: 70px;
+        }
+
+        #page-preloader	.icn-load {
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            left: 50%;
+            top: 50%;
+            margin: -20px 0 0 -20px;
+            z-index: 9999;
+        }
+
+        #page-preloader .icn-load .preloader-sprite{
+            display: block;
+            height: 40px;
+            width: 160px;
+        }
+
+        #page-preloader .icn-load .img{
+            display: block;
+            width: 40px;
+            height: 40px;
+            float: left;
+            background-position: center center;
+            background-size: 100%;
+            background-repeat: no-repeat !important;
+        }
+
+        #page-preloader .icn-load .img.i1{
+            background-image: url(../img/preloader/5.svg);
+        }
+        #page-preloader .icn-load .img.i2{
+            background-image: url(../img/preloader/4.svg);
+        }
+        #page-preloader .icn-load .img.i3{
+            background-image: url(../img/preloader/3.svg);
+        }
+        #page-preloader .icn-load .img.i4{
+            background-image: url(../img/preloader/2.svg);
+        }
+
+
+        #page-preloader .preloader-sprite {
+            animation:         animationFrames 4s 10 step-end;
+            -webkit-animation: animationFrames 4s 10 step-end;
+            -moz-animation:    animationFrames 4s 10 step-end;
+            -o-animation:      animationFrames 4s 10 step-end;
+            -ms-animation:     animationFrames 4s 10 step-end;
+        }
+
+        @keyframes animationFrames{
+            0%   {margin-left: 0px;   }
+            25%  {margin-left: -40px; }
+            50%  {margin-left: -80px; }
+            75%  {margin-left: -120px;}
+            100% {margin-left: 0px;}
+        }
+
+        @-moz-keyframes animationFrames{
+            0%   {margin-left: 0px;   }
+            25%  {margin-left: -40px; }
+            50%  {margin-left: -80px; }
+            75%  {margin-left: -120px;}
+            100% {margin-left: 0px;}
+        }
+
+        @-webkit-keyframes animationFrames {
+            0%   {margin-left: 0px;   }
+            25%  {margin-left: -40px; }
+            50%  {margin-left: -80px; }
+            75%  {margin-left: -120px;}
+            100% {margin-left: 0px;}
+        }
+
+        @-o-keyframes animationFrames {
+            0%   {margin-left: 0px;   }
+            25%  {margin-left: -40px; }
+            50%  {margin-left: -80px; }
+            75%  {margin-left: -120px;}
+            100% {margin-left: 0px;}
+        }
+
+        @-ms-keyframes animationFrames {
+            0%   {margin-left: 0px;   }
+            25%  {margin-left: -40px; }
+            50%  {margin-left: -80px; }
+            75%  {margin-left: -120px;}
+            100% {margin-left: 0px;}
+        }
+
+        .wrapper{
+            overflow: hidden;
+        }
+
+        .cd-panel {
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+        }
+
+        .cd-panel-content {
+            height: 100vh !important;
+        }
+
+        .from-right .cd-panel-container {
+            right: 0;
+            -o-transform: translate3d(100%, 0, 0);
+            -ms-transform: translate3d(100%, 0, 0);
+            -moz-transform: translate3d(100%, 0, 0);
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+        }
+
+        .from-left .cd-panel-container {
+            left: 0;
+            -o-transform: translate3d(-100%, 0, 0);
+            -ms-transform: translate3d(-100%, 0, 0);
+            -moz-transform: translate3d(-100%, 0, 0);
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+
+        .cd-btn span {
+            display: block;
+            background: #fff;
+            width: 30px;
+            height: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .header--main .cd-btn span {
+            background: #004F87 !important;
+        }
+
+        .cd-panel-close:before, .cd-panel-close:after {
+            height: 3px !important;
+        }
+
+    </style>
+
+</head>
+
+<body ontouchstart="">
+
+<div id="page-preloader">
+    <!--
+        <span class="spinner">
+          <img src="/upload/iblock/df1/df19b73f9da0cd21daa82a838bf705fb.svg" alt="loader">
+        </span>
+    -->
+    <span class="icn-load">
+        <span class="preloader-sprite">
+            <span class="img i1"></span>
+            <span class="img i2"></span>
+            <span class="img i3"></span>
+            <span class="img i4"></span>
+        </span>
+    </span>
+</div>
+
+<div class="wrapper">
+
+
+
+    <header class="header header--home">
+        <div class="container-fluid">
+            <div class="wrapp">
+                <div class="header__weatherBox">
+                    <a href="/"><img src="http://e-port.me/img/6063382_500/image.png" alt="logo"></a>
+                    <!--<div class="wheather wrapp">
+                        <div class="icon"></div>
+                        <div class="temperature">28&#176;</div>
+                        <div class="clarity">облачно</div>
+                    </div>-->
+                </div>
+                <div class="header__navHome tt">
+
+                    <ul class="menu">
+                        <li class=""><a href="#about-sochi">Портфолио</a>
+                        <li class=""><a href="#events">Вузы</a>
+                        <li class=""><a href="#news">Мероприятия</a>
+                        <li class=""><a href="#responses">О проекте</a>
+                        <li class=""><a href="#map">Интерактивная карта</a>
+                    </ul>
+                </div>
+
+                <div class="menuBoxAdapt">
+                    <span class="cd-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="banner" style="background: url(http://sochiru.ru/bitrix/templates/sochi/upload/iblock/3f1/3f1717da015db38348eeac9be3fdd4f8.jpg) top center no-repeat;overflow: hidden;">
+
+
+
+        <div class="container">
+            <div class="column_cc">
+                <h1>О твоих успехах узнают!</h1>
+            </div>
+            <div class="itemRow">
+                <h2>Создай своё портфолио достижений</h2>
+                <button class="btn">Создать портфолио</button>
+            </div>
+
+
+        </div>
+        <div class="banner__advantages">
+            <div class="container">
+                <div class="itemRow">
+                    <a class="banner__advantages__item" href="/map/kuda-poyti/">
+                        <div class="iconBox">
+                            <div class="icon icon--first"></div>
+                        </div>
+                        <p>Куда пойти</p>
+                    </a>
+                    <a class="banner__advantages__item" href="/map/gde-ostanovitsya/">
+                        <div class="iconBox">
+                            <div class="icon icon--second"></div>
+                        </div>
+                        <p>Где остановиться</p>
+                    </a>
+                    <a class="banner__advantages__item" href="/map/gde-poest/">
+                        <div class="iconBox">
+                            <div class="icon icon--third"></div>
+                        </div>
+                        <p>Где поесть</p>
+                    </a>
+                    <a class="banner__advantages__item" href="/map/chto-posmotret/">
+                        <div class="iconBox">
+                            <div class="icon icon--fourth"></div>
+                        </div>
+                        <p>Что посмотреть</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="container">
+
+            <h2 class="main_title" id="about-sochi">о сочи</h2>
+
+            <div>
+                <div class="itemRow">
+                    <div class="about__item">
+                        <div style="background: url(/upload/iblock/777/777af770b5f8d6f67fd7b1c837a505ac.jpg) center no-repeat;">
+                            <a href="/about-sochi/o-gorode/"><img src="/upload/uf/2d7/2d7ca106aa15972779c8d85f447cf7ab.svg" alt="icon"></a>
+                            <h3>О Городе</h3>
+                            <a href="/about-sochi/o-gorode/" class="link"></a>
+                        </div>
+                    </div>
+                    <div class="about__item">
+                        <div style="background: url(/upload/iblock/436/436dab92bcedec5796766922520a47ee.jpg) center no-repeat;">
+                            <a href="/about-sochi/aktualno/"><img src="/upload/uf/43c/43c8298bd2be145bd7cb437e4b7e0453.svg" alt="icon"></a>
+                            <h3>Актуально</h3>
+                            <a href="/about-sochi/aktualno/" class="link"></a>
+                        </div>
+                    </div>
+                    <div class="about__item">
+                        <div style="background: url(/upload/iblock/246/246b71dff24b7d14e29514fc7db1c8df.jpg) center no-repeat;">
+                            <a href="/about-sochi/lechenie-i-ozdorovlenie-na-kurorte/"><img src="/upload/uf/073/0737b08bbdefb37a2ec071aad57c838a.svg" alt="icon"></a>
+                            <h3>Лечение и оздоровление на курорте</h3>
+                            <a href="/about-sochi/lechenie-i-ozdorovlenie-na-kurorte/" class="link"></a>
+                        </div>
+                    </div>
+                </div><div class="itemRow">
+                <div class="about__item">
+                    <div style="background: url(/upload/iblock/363/36318139c1b1c9e73bab0f8183d665ae.jpg) center no-repeat;">
+                        <a href="/about-sochi/osnovnye-vidy-turizma/"><img src="/upload/uf/7f9/7f94a01aaaf63a899fbb08f4c0cd8fe0.svg" alt="icon"></a>
+                        <h3>Основные виды туризма</h3>
+                        <a href="/about-sochi/osnovnye-vidy-turizma/" class="link"></a>
+                    </div>
+                </div>
+                <div class="about__item">
+                    <div style="background: url(/upload/iblock/22b/22b612b82527791e0d4edd163208130b.jpg) center no-repeat;">
+                        <a href="/about-sochi/chempionat-mira-po-futbolu-fifa-2018-v-sochi/"><img src="/upload/uf/66b/66b3c6b31746b624f4b2b214c37e4df7.svg" alt="icon"></a>
+                        <h3>Чемпионат мира по футболу FIFA 2018 в Сочи</h3>
+                        <a href="/about-sochi/chempionat-mira-po-futbolu-fifa-2018-v-sochi/" class="link"></a>
+                    </div>
+                </div>
+                <div class="about__item">
+                    <div style="background: url(/upload/iblock/227/227b05bc1e8d3bb7cde6dac78cc4cb25.jpg) center no-repeat;">
+                        <a href="/about-sochi/gornolyzhnye-kurorty/"><img src="/upload/uf/a04/a04a2d1647069bcc88209f54bc4176cc.svg" alt="icon"></a>
+                        <h3>Горнолыжные курорты</h3>
+                        <a href="/about-sochi/gornolyzhnye-kurorty/" class="link"></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="news">
+
+
+        <div class="container">
+
+
+
+            <div class="news__afisha">
+
+                <h2 class="main_title" id="events">Событийный Сочи</h2>
+                <div class="newsPage__row itemRow--fs">
+                    <div class="col-xs-6 col-md-4">
+                        <div class="newsPage__item">
+                            <a href=""><div class="imgBox" style="background: url(/upload/iblock/c96/c96bc61ae50558e28598e13c79cbbac8.jpg) center no-repeat;"></div></a>
+                            <div class="textBox">
+                                <h3 class="title"><a href="/map/afisha/vystavka-art-pozitiv-otkroetsya-v-sochi/">Выставка &quot;Арт-позитив&quot; откроется в Сочи</a></h3>
+                                <p>Вернисаж состоится 18 мая в 15.00 в литературно-мемориальном музее Н.Островского. Гостям будут представлены работы студентов кафедры архитектуры и дизайна Сочинского государственного университета.&nbsp;&nbsp;В экспозицию вошли более 80 работ, выполненных в различных техниках. Это живопись, графика, батик, мозаика, витраж, квиллинг и декоративная штукатурка.<br />
+                                    <br />
+                                </p>
+                                <p class="address"><span class="icon"></span><span class="text">Литературно-мемориальный музей Н. А. Островского</span></p>
+                            </div>
+
+                            <div class="infoBox wrapp">
+                                <div class="date">18.05.2018 - 18.06.2018</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="newsPage__item">
+                            <a href=""><div class="imgBox" style="background: url(/upload/iblock/ed9/ed9089e312d86171999e88d6ac556a25.jpg) center no-repeat;"></div></a>
+                            <div class="textBox">
+                                <h3 class="title"><a href="/map/afisha/vsekubanskaya-aktsiya-navstrechu-chempionatu-mira-po-futbolu-v-gorode-sochi-/">Всекубанская акция «Навстречу чемпионату мира по футболу в городе Сочи!»</a></h3>
+                                <p>Акция, которая поочередно охватывает все муниципальные образования Кубани, направлена на широкое информирование населения края о мероприятиях по подготовке и проведению Чемпионата мира по футболу 2018 года в городе Сочи и не имеет аналогов по продолжительности и охвату населения. <br />
+                                    Акция стартовала в апреле 2016 года в Ейском районе. За два года она пройдёт во всех 44 муниципалитетах края. Финал состоится в Сочи накануне чемпионата мира по футболу в мае 2018 года.<br />
+                                </p>
+                                <p class="address"><span class="icon"></span><span class="text">Площадь Флага</span></p>
+                            </div>
+
+                            <div class="infoBox wrapp">
+                                <div class="date">19.05.2018 - 09.06.2018</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="newsPage__item">
+                            <a href=""><div class="imgBox" style="background: url(/upload/iblock/d68/d685e186126fcab5ffcfee54cf2ee4c3.jpg) center no-repeat;"></div></a>
+                            <div class="textBox">
+                                <h3 class="title"><a href="/map/afisha/sorevnovaniya-po-skandinavskoy-khodbe-proydut-v-gorakh-sochi/">Соревнования по скандинавской ходьбе пройдут в горах Сочи</a></h3>
+                                <p>19 мая в горно-туристическом центре «Газпром» пройдут IV Открытые соревнования по скандинавской ходьбе. Главные призы – сертификаты на проживание в высокогорной четырех звездочной гостинице.<br />
+                                    Ежегодно соревнования проходят на территории лыжно-биатлонного комплекса «Лаура». В этом году дистанция составит три км. Маршрут пролегает по знаменитым олимпийским трассам, расположенным на высоте 1470 метров над уровнем моря. </p>
+                                <p class="address"><span class="icon"></span><span class="text">Горно-туристический центр «Газпром»</span></p>
+                            </div>
+
+                            <div class="infoBox wrapp">
+                                <div class="date">19.05.2018</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right"><a href="/map/afisha/" class="news__more">Все события</a></div>
+
+            </div>
+
+            <h2 class="main_title" id="news">Новости</h2>
+            <div class="newsPage__row itemRow--fs">
+                <div class="col-xs-6 col-md-4">
+                    <div class="newsPage__item newsPage__item-index">
+                        <a href="/news/sport/v-sochi-nachal-rabotat-edinyy-telefon-transportnogo-koll-tsentra-chm-2018/"><div class="imgBox" style="background: url(/upload/iblock/acf/acf31f321e89fcac8f642402c379851a.jpg) center no-repeat;"></div></a>
+                        <div class="textBox">
+                            <h3 class="title"><a href="/news/sport/v-sochi-nachal-rabotat-edinyy-telefon-transportnogo-koll-tsentra-chm-2018/">В Сочи начал работать единый телефон транспортного колл-центра ЧМ-2018</h3>
+                            <p>Телефон &quot;горячей линии&quot; 8-800-234-2018, все звонки бесплатные. Диспетчеры в круглосуточном режиме помогут выстроить маршрут, ответят на вопросы, как и на чем добраться до нужной остановки.&nbsp;&nbsp;Операторы линии будут отвечать на вопросы на пяти языках: русском, английском, французском, немецком и испанском.<br />
+                                <br />
+                            </p>
+                        </div>
+                        <div class="infoBox wrapp">
+                            <div class="categoryName--sport">
+                                <div class="icon"></div>
+                                <div class="text">Спорт</div>
+                            </div>
+                            <div class="date">17.05.2018</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <div class="newsPage__item newsPage__item-index">
+                        <a href="/news/tourism/sochi-i-rigu-svyazhet-pryamoe-aviasoobshchenie/"><div class="imgBox" style="background: url(/upload/iblock/ce2/ce2b18fb6679c913b1ccaa90627b24b7.jpg) center no-repeat;"></div></a>
+                        <div class="textBox">
+                            <h3 class="title"><a href="/news/tourism/sochi-i-rigu-svyazhet-pryamoe-aviasoobshchenie/">Сочи и Ригу свяжет прямое авиасообщение</h3>
+                            <p>Теперь добраться до столицы Латвии сочинцы смогут за 3 часа 10 минут. Новый маршрут предлагает удобные стыковки с аэропортами Европы и Скандинавии для путешественников из России, а туристам из стран Балтии – возможности для летнего отдыха на черноморском курорте. <br />
+                                <br />
+                                Самолет латвийской авиакомпании был сегодня торжественно встречен в Международном аэропорту Сочи традиционным приветствием для первых рейсов – водной аркой &#40;«Аркой триумфа»&#41;. <br />
+                                <br />
+                                Полеты осуществляет авиакомпания airBaltic. По информации авиаперевозчика, стоимость билета в одном направлении составит от 99 евро &#40;примерно 7000 рублей&#41;, включая все сборы, сообщает пресс-служба АО «Международный аэропорт».</p>
+                        </div>
+                        <div class="infoBox wrapp">
+                            <div class="categoryName--tourism">
+                                <div class="icon"></div>
+                                <div class="text">Туризм</div>
+                            </div>
+                            <div class="date">16.05.2018</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <div class="newsPage__item newsPage__item-index">
+                        <a href="/news/sport/sochi-odno-iz-samykh-populyarnykh-napravleniy-u-bolelshchikov-na-spetspoezdakh-vo-vremya-chempionata/"><div class="imgBox" style="background: url(/upload/iblock/95a/95a36995cca67fae8ab836e53d2d0567.jpg) center no-repeat;"></div></a>
+                        <div class="textBox">
+                            <h3 class="title"><a href="/news/sport/sochi-odno-iz-samykh-populyarnykh-napravleniy-u-bolelshchikov-na-spetspoezdakh-vo-vremya-chempionata/">Сочи – одно из самых популярных направлений у болельщиков на спецпоездах во время Чемпионата мира по футболу</h3>
+                            <p>На сегодняшний день бесплатные поезда для болельщиков Чемпионата мира-2018 уже заполнены на 74&#37;. 47&#37; всех оформленных на 14 мая мест на забронировано иностранными гражданами. Об этом сообщил генеральный директор АНО «Транспортная дирекция-2018» Кирилл Поляков.<br />
+                                <br />
+                                Для бесплатной перевозки болельщиков и представителей СМИ во время Чемпионата мира к регулярному расписанию было добавлено 734 дополнительных поезда общей емкостью в 448 162 места.<br />
+                            </p>
+                        </div>
+                        <div class="infoBox wrapp">
+                            <div class="categoryName--sport">
+                                <div class="icon"></div>
+                                <div class="text">Спорт</div>
+                            </div>
+                            <div class="date">16.05.2018</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right"><a href="/news/" class="news__more">Все новости</a></div>
+
+        </div>
+    </div>
+
+
+    <div class="reviews">
+        <div class="container">
+
+            <h2 class="main_title--white" id="responses">Отзывы</h2>
+
+
+            <div class="reviews__slider">
+                <div>
+                    <p>В конце июня отдыхали семьей в Сочи, в Адлерском районе, п.Молдовка. Приехали на машине. Отдых очень понравился. Остановились в частном доме, который мы забронировали заранее.Очень советую бронировать дома, комнаты или квартиры заранее. Мы так и сделали. Долго искали, но нашли подходящее объявление. Дом  расположен в прекрасном месте, тишина и спокойствие, только птички поют. На участке растут плодоносные деревья, хозяева разрешали &#40;бесплатно&#41; срывать и кушать вишню и мушмулу, остальное еще не поспело. Купались и загорали на пляже &quot;Огонек&quot;. Море чистое, пляж тоже, народу было мало. </p>
+                </div>
+                <div>
+                    <p><p>
+                    Сочи в декабре конечно удивил.
+                </p>
+                    <br></p>
+                </div>
+                <div>
+                    <p><p>
+                    Ох уж эти морские картинки, невозможно пройти мимо и не достать телефон<br>
+                </p></p>
+                </div>
+                <div>
+                    <p><p>
+                    Нравится мне такой октябрь! Солнце и +20. Так я пожалуй и зиму бы полюбила.&nbsp;
+                </p>
+                    <br></p>
+                </div>
+                <div>
+                    <p><p>
+                    Горки Город - это маленькая Швейцария, в которой я ещё не была.. Слышны разговоры на разных языках планеты, вкусная архитектура , хрустящий воздух и запах Любви... - теряешь реальность в этой нереальной сказке.
+                </p>
+                    <br></p>
+                </div>
+            </div>
+            <div class="reviews__sliderNav">
+                <div>
+                    <div class="faceBox">
+                        <img src="/upload/iblock/bb5/bb50be48685feade54fb4b1d20c743e1.png" alt="face">
+                    </div>
+                    <p>Иван</p>
+                </div>
+                <div>
+                    <div class="faceBox">
+                        <img src="/upload/iblock/6e3/6e3ba2395099bded59a5da5ac7a33023.jpg" alt="face">
+                    </div>
+                    <p>Мандарина Ананасова</p>
+                </div>
+                <div>
+                    <div class="faceBox">
+                        <img src="/upload/iblock/e46/e46a06616828a03b3870ba67d705f355.jpg" alt="face">
+                    </div>
+                    <p>Юлия Амеликова</p>
+                </div>
+                <div>
+                    <div class="faceBox">
+                        <img src="/upload/iblock/0f8/0f814e21b37f76d17a3507a10bc42634.jpg" alt="face">
+                    </div>
+                    <p>Ольга Романова</p>
+                </div>
+                <div>
+                    <div class="faceBox">
+                        <img src="/upload/iblock/14f/14f9768e2430f9745ecd967b17c16dd0.jpg" alt="face">
+                    </div>
+                    <p>Марина Киселева</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="workScheme">
+        <div class="container">
+            <h2 class="main_title" id="map">Интерактивная карта</h2>
+
+            <div class="tab workScheme__tab wrapp">
+
+                <p class="how_work">как это работает?</p>
+
+                <div class="tab_content" style='width: 625px'>
+                    <input type="hidden" id='active-video'>
+                    <div class="tabs_item" style="display: block">
+                        <div class="workScheme__videoBox" id="videoBox">
+                            <div class="workScheme__videoBox__bg" style="background: url(http://sochiru.ru/bitrix/templates/sochi/img/video_bg.jpg) center no-repeat;">
+                                <div class="number">1</div>
+                                <span class="videoLink" id="videoLink1"></span>
+                                <div  class="videoModal" id="videoModal1">
+                                    <span class="close" id="close1"><i class="fa fa-times"></i></span>
+                                    <div id="vi1"></div>
+                                    <!--<iframe width="100%" height="350" src="https://www.youtube.com/embed/LtoXBXmbllU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs_item">
+                        <div class="workScheme__videoBox" id="videoBox">
+                            <div class="workScheme__videoBox__bg" style="background: url(http://sochiru.ru/bitrix/templates/sochi/img/video_bg.jpg) center no-repeat;">
+                                <div class="number">2</div>
+                                <span class="videoLink" id="videoLink2"></span>
+                                <div  class="videoModal" id="videoModal2">
+                                    <span class="close" id="close2"><i class="fa fa-times"></i></span>
+                                    <div id="vi2"></div>
+                                    <!--<iframe width="100%" height="350" src="https://www.youtube.com/embed/Z31B4atHvsU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs_item">
+                        <div class="workScheme__videoBox" id="videoBox">
+                            <div class="workScheme__videoBox__bg" style="background: url(http://sochiru.ru/bitrix/templates/sochi/img/video_bg.jpg) center no-repeat;">
+                                <div class="number">3</div>
+                                <span class="videoLink" id="videoLink3"></span>
+                                <div  class="videoModal" id="videoModal3">
+                                    <span class="close" id="close3"><i class="fa fa-times"></i></span>
+                                    <div id="vi3"></div>
+                                    <!--<iframe width="100%" height="350" src="https://www.youtube.com/embed/EjEoF6q2yrQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="workScheme__tabsBox">
+                    <ul class="workScheme__tabs tabs">
+                        <li><a href="">основные функции  <span class="number">1</span></a></li>
+                        <li><a href="">поиск мест  <span class="number">2</span></a></li>
+                        <li><a href="">фильтрация  <span class="number">3</span></a></li>
+                    </ul>
+
+                    <a href="/map/kuda-poyti/" class="news__more">Перейти к карте</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <ul class="homeSocBox">
+        <li><a href="https://www.instagram.com/tvoi_sochi" target="_blank" class="insta"><span class="icon"></span></a></li>
+        <li><a href="https://vk.com/tvoi_sochi" target="_blank" class="vk"><span class="icon"></span></a></li>
+        <li><a href="https://www.facebook.com/your.sochi" target="_blank" class="fb"><span class="icon"></span></a></li>
+        <li><a href="https://www.youtube.com/channel/UCpr1O9KGBzrHFUUlJaTpgFA/videos" target="_blank" class="youtb"><span class="icon"></span></a></li>
+    </ul>
+
+
+    <footer class="footer">
+
+        <div class="container">
+            <div class="footer_top wrapp">
+                <div class="footer__logoBox">
+                    <a href="/"><img src="/upload/iblock/df1/df19b73f9da0cd21daa82a838bf705fb.svg" alt="logo"></a>
+                </div>
+                <div class="footer__subscribe">
+                    <form id="subscribe" action="#">
+                        <label>
+                            <span>Подпишись</span>
+                            <div class="inputBox">
+                                <input name="email" type="email" placeholder="Введите E-mail" required="">
+                                <input type="submit">
+                            </div>
+                        </label>
+                    </form>
+                </div>
+                <ul class="footer__socBox itemRow">
+                    <li><a href="https://www.instagram.com/tvoi_sochi" target="_blank"><span class="icon icon--insta"></span></a></li>
+                    <li><a href="https://vk.com/tvoi_sochi" target="_blank"><span class="icon icon--vk"></span></a></li>
+                    <li><a href="https://www.facebook.com/your.sochi" target="_blank"><span class="icon icon--fb"></span></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCpr1O9KGBzrHFUUlJaTpgFA/videos" target="_blank"><span class="icon icon--youtb"></span></a></li>
+                </ul>
+                <!--            <a href="#" class="footer__btn">напиши</a>-->
+            </div>
+            <div class="footer_bottom">
+                <ul class="footer__partnersBox">
+                    <li><a href="https://russia.travel/" target="_blank"><img src="http://sochiru.ru/bitrix/templates/sochi/img/russian_travel.jpg" alt="partners"></a></li>
+                    <li><a href="https://www.russiatourism.ru/" target="_blank"><img src="http://sochiru.ru/bitrix/templates/sochi/img/partner-3.png" alt="partners"></a></li>
+                    <li><a href="http://min.kurortkuban.ru/" target="_blank"><img src="http://sochiru.ru/bitrix/templates/sochi/img/partner-2.png" alt="partners"></a></li>
+                    <li><a href="http://www.sochiadm.ru/" target="_blank"><img src="http://sochiru.ru/bitrix/templates/sochi/img/partner-4.png" alt="partners"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+</div> <!-- end wrapper -->
+
+<div class="cd-panel from-left">
+    <div class="cd-panel-container">
+        <a href="#" class="cd-panel-close">Закрыть</a>
+        <div class="cd-panel-content">
+
+            <ul class="menu">
+                <li class=""><a href="/about-sochi/">О сочи</a>
+                <li class=""><a href="/news/">Новости</a>
+                <li class=""><a href="/#responses">Отзывы</a>
+                <li class=""><a href="/map/kuda-poyti/">Куда пойти</a>
+                <li class=""><a href="/map/gde-ostanovitsya/">Где остановиться</a>
+                <li class=""><a href="/map/gde-poest/">Где поесть</a>
+                <li class=""><a href="/map/chto-posmotret/">Что посмотреть</a>
+                <li class=""><a href="/map/afisha/">Событийный Сочи</a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="callBack" class="modalBox mfp-with-anim mfp-hide">
+    <form action="get">
+        <div class="comparison__titleBox">
+            <h2 class="main_title">Необходима консультация?</h2>
+            <p>Подробно расскажем о наших услугах, видах работ и типовых проектах, рассчитаем стоимость и подготовим индивидуальное предложение</p>
+        </div>
+        <div class="itemRow--fs">
+            <div><input type="text" placeholder="Введите имя"></div>
+            <div><input type="tel" placeholder="Введите телефон"></div>
+        </div>
+        <label class="agreementBox">
+            <input type="checkbox">
+            <span>Я даю согласие на обработку <a href="#" target="_blank">персональных данных</a></span>
+        </label>
+        <input  class="main_btn--green" type="submit" value="Жду звонка">
+
+    </form>
+</div>
+
+<!-- Load CSS -->
+<script>
+    function loadCSS(hf) {
+        var ms = document.createElement("link");
+        ms.rel = "stylesheet";
+        ms.href = hf;
+        document.getElementsByTagName("body")[0].appendChild(ms);
+    }
+    loadCSS("http://sochiru.ru/bitrix/templates/sochi/css/libs.min.css");
+    loadCSS("http://sochiru.ru/bitrix/templates/sochi/css/main.css");
+</script>
+
+<!-- Load Scripts -->
+<script>
+    var scr = {
+        "scripts": [
+            {"src": "http://sochiru.ru/bitrix/templates/sochi/js/libs.min.js", "async": false},
+            {"src": "http://sochiru.ru/bitrix/templates/sochi/js/script.js", "async": false}
+        ]
+    };
+    !function (t, n, r) {
+        "use strict";
+        var c = function (t) {
+            if ("[object Array]" !== Object.prototype.toString.call(t))return !1;
+            for (var r = 0; r < t.length; r++) {
+                var c = n.createElement("script"), e = t[r];
+                c.src = e.src, c.async = e.async, n.body.appendChild(c)
+            }
+            return !0
+        };
+        t.addEventListener ? t.addEventListener("load", function () {
+                c(r.scripts);
+            }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+                    c(r.scripts)
+                }) : t.onload = function () {
+                    c(r.scripts)
+                }
+    }(window, document, scr);
+</script>
+
+<style type="text/css">
+    .header__nav .menu li:nth-child(4):before {
+        display: none;
+    }
+    .header__nav .menu li:nth-child(4) {
+        margin-right: 0px;
+        padding-left: 40px;
+    }
+    .header__nav .menu li:nth-child(3) {
+        margin-right: 0px;
+        padding-right: 40px;
+        border-right: 1px solid #004F87;
+    }
+    .header__nav .menu li:nth-child(3):before {
+        display: none
+    }
+    .hotelPage__contentBox b, .hotelPage__contentBox strong {
+        font-weight: normal;
+        font-family: 'Rotonda-Bold', sans-serif;
+    }
+
+    .extraFilter input[type=text] {
+        border: 0 none;
+        border-bottom: 1px solid #004F87;
+        color: #4f4f4f;
+        font: 14px/14px "RotondaC", sans-serif;
+        padding: 0 0 4px 0;
+        width: 100%;
+        position: relative;
+        top: -12px;
+    }
+    .newsPage__item h3 {
+        /* min-height: 64px; */
+    }
+    .banner__advantages__item p {
+        color: #fff!important;
+        text-align: center;
+    }
+    .input-type-date {
+        width:100%;
+        margin-top: 26px;
+    }
+    .ymaps-link {
+        color: #00c;
+        text-decoration: none;
+    }
+    .ymaps-link:hover {
+        text-decoration: underline;
+    }
+    .newsPage__item-index {
+        min-height: 420px;
+    }
+    .newsPage__filterCat ul li.sport .jq-checkbox.checked .jq-checkbox__div {
+        background-image: none!important;
+        background-color: #004F87;
+        border-radius: 50%;
+    }
+    .newsPage__filterCat ul li.culture .jq-checkbox.checked .jq-checkbox__div {
+        background-image: none!important;
+        background-color: #E8110F;
+        border-radius: 50%;
+    }
+    .newsPage__filterCat ul li.tourism .jq-checkbox.checked .jq-checkbox__div {
+        background-image: none!important;
+        background-color: #E9991E;
+        border-radius: 50%;
+    }
+    .newsPage__filterCat ul li.events .jq-checkbox.checked .jq-checkbox__div {
+        background-image: none!important;
+        background-color: #008826;
+        border-radius: 50%;
+    }
+    .categoryName--tourism {
+        color: #E9991E;
+    }
+    .categoryName--sport .icon {
+        display: none;
+    }
+    .categoryName--culture .icon {
+        display: none;
+    }
+    .categoryName--tourism .icon {
+        display: none;
+    }
+    .categoryName--events .icon {
+        display: none;
+    }
+    .header__weatherBox img {
+        width: 112px;
+        height: 69px;
+    }
+    .footer__logoBox img {
+        width: 112px;
+        height: 69px;
+    }
+    .header__logoBox img {
+        width: 112px;
+        height: 69px;
+    }
+    .singlePage__infoBox .catIcon--sport .icon {
+        background: none!important;
+    }
+    .singlePage__infoBox .catIcon--culture .icon {
+        background: none!important;
+    }
+    .singlePage__infoBox .catIcon--tourism .icon {
+        background: none!important;
+    }
+    .singlePage__infoBox .catIcon--events .icon {
+        background: none!important;
+    }
+    .video_contain {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+    }
+    video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        min-height: 50%;
+        min-width: 50%;
+    }
+    .tab.workScheme__tab.wrapp {
+        overflow: hidden
+    }
+    .about__item img {
+        max-width: auto;
+        max-height: 74px;
+    }
+
+    .footer__socBox.itemRow li {
+        margin-left: 10px;
+    }
+
+    .about-sochi .about__item a {
+        text-align: center;
+    }
+
+    .newsPage__box p {
+        margin-bottom: 25px !important;
+    }
+
+    a.news__more {
+        line-height: 38px !important
+    }
+
+    @media (max-width: 768px) {
+        .video_contain {
+        //        display: none;
+        }
+    }
+
+    body {
+        color: #1a1a1a !important;
+    }
+
+    .hotelPage__gallery {
+        margin-top: 30px;
+    }
+
+    .newsPage__row.itemRow--fs .col-xs-6 {
+        margin-top: 10px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .newsPage__item:hover {
+        margin-top: -5px !important;
+    }
+
+    .newsPage__box, .newsPage__box p {
+        color: #1a1a1a !important;
+        font-size: 16px;
+    }
+
+    .singlePage__slider {
+        margin-top: 20px;
+    }
+
+    .infoBox.wrapp p {
+        color: #fff !important;
+    }
+
+
+    .banner__advantages__item .icon.icon--first {
+        width: 45px !important;
+        height: 45px !important;
+        background-image: url(http://sochiru.ru/bitrix/templates/sochi/img/icns/main/go.svg) !important;
+        background-position: center center !important;
+        background-size: 100% !important;
+    }
+
+    .banner__advantages__item .icon.icon--second {
+        width: 45px !important;
+        height: 45px !important;
+        background-image: url(http://sochiru.ru/bitrix/templates/sochi/img/icns/main/hotel.svg) !important;
+        background-position: center center !important;
+        background-size: 100% !important;
+    }
+
+    .banner__advantages__item .icon.icon--third {
+        width: 45px !important;
+        height: 45px !important;
+        background-image: url(http://sochiru.ru/bitrix/templates/sochi/img/icns/main/eat.svg) !important;
+        background-position: center center !important;
+        background-size: 100% !important;
+    }
+
+    .banner__advantages__item .icon.icon--fourth {
+        width: 45px !important;
+        height: 45px !important;
+        background-image: url(http://sochiru.ru/bitrix/templates/sochi/img/icns/main/look.svg) !important;
+        background-position: center center !important;
+        background-size: 100% !important;
+    }
+
+
+    .hotelPage__closeBox .icon.icon--first {
+        width: 25px !important;
+        height: 25px !important;
+        background-image: url(http://sochiru.ru/bitrix/templates/sochi/img/icns/main/go_b.svg) !important;
+        background-position: center center !important;
+        background-size: 100% !important;
+    }
+
+    .hotelPage__closeBox .icon.icon--second {
+        width: 25px !important;
+        height: 25px !important;
+        background-image: url(http://sochiru.ru/bitrix/templates/sochi/img/icns/main/hotel_b.svg) !important;
+        background-position: center center !important;
+        background-size: 100% !important;
+    }
+
+    .hotelPage__closeBox .icon.icon--third {
+        width: 25px !important;
+        height: 25px !important;
+        background-image: url(http://sochiru.ru/bitrix/templates/sochi/img/icns/main/eat_b.svg) !important;
+        background-position: center center !important;
+        background-size: 100% !important;
+    }
+
+    .hotelPage__closeBox .icon.icon--fourth {
+        width: 25px !important;
+        height: 25px !important;
+        background-image: url(http://sochiru.ru/bitrix/templates/sochi/img/icns/main/look_b.svg) !important;
+        background-position: center center !important;
+        background-size: 100% !important;
+    }
+
+
+    .half_input {
+        position: relative;
+        display: inline-block;
+        width: 45%;
+    }
+    .half_input input {
+        width: 100%;
+        background-image: none!important;
+        padding-bottom: 4px;
+    }
+    .calendar-appears img {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        width: 17px;
+        height: 17px;
+        border: 0 none;
+        outline: 0 none;
+        padding: 0;
+        margin: 0;
+        background: transparent none;
+    }
+    .calendar-appears img:hover {
+        border: 0 none;
+        outline: 0 none;
+        padding: 0;
+        margin: 0;
+        background: transparent none;
+    }
+    .half_input img {
+        top: 2px;
+        right: 0;
+    }
+
+    .show-more-button {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 20px auto 50px auto;
+        text-align: center;
+    }
+    .show-more-button button {
+        font-size: 21px;
+        font-family: 'Rotonda-Bold', sans-serif;
+        text-transform: uppercase;
+        color: #004F87;
+        padding: 6px 20px 2px 20px;
+        border: 2px solid #004F87;
+        background-color: #fff;
+    }
+
+    .newsPage__box ul {
+        list-style-type: circle !important;
+        padding-left: 20px !important;
+    }
+
+    .newsPage__box ul li {
+        margin-bottom: 10px;
+    }
+
+    .newsPage__filterCat ul {
+        list-style: none!important;
+    }
+
+    .socBox {
+        list-style: none!important;
+    }
+
+    .ya-share2__list_direction_horizontal > .ya-share2__item {
+        display: block!important;
+        margin: 4px auto!important;
+    }
+    .ya-share2__container_size_m .ya-share2__item:last-child {
+        margin: 4px auto!important;
+    }
+
+    .ya-share2__item_service_facebook .ya-share2__icon {
+        background: transparent url(http://sochiru.ru/bitrix/templates/sochi/img/sprite.png) -290px -142px no-repeat!important;
+        width: 8px!important;
+        height: 16px!important;
+    }
+
+    .ya-share2__item_service_vkontakte .ya-share2__icon {
+        background: transparent url(http://sochiru.ru/bitrix/templates/sochi/img/sprite.png) -231px -195px no-repeat!important;
+        width: 18px!important;
+        height: 10px!important;
+    }
+
+    .ya-share2__item_service_twitter .ya-share2__icon {
+        background: transparent url(http://sochiru.ru/bitrix/templates/sochi/img/sprite.png) -239px -150px no-repeat!important;
+        width: 16px!important;
+        height: 13px!important;
+    }
+
+    .ya-share2__item_service_facebook .ya-share2__badge {
+        background-color: transparent!important;
+    }
+
+    .ya-share2__item_service_vkontakte .ya-share2__badge {
+        background-color: transparent!important;
+    }
+
+    .ya-share2__item_service_twitter .ya-share2__badge {
+        background-color: transparent!important;
+    }
+
+    .ya-share2__list {
+        position: relative!important;
+        left: -10px!important;
+    }
+
+    .ya-share2__list_direction_horizontal > .ya-share2__item {
+        margin: 22px auto!important;
+    }
+
+    .ajax-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .ajax-loading-shadow {
+        background-color: #000;
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .ajax-loading-spinner {
+        background: transparent url('/spinner.gif') center center no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    div.about {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    div.news {
+        padding-top: 20px;
+        padding-bottom: 100px;
+    }
+    div.news__afisha {
+        padding-bottom: 50px;
+    }
+    .newsPage__item {
+        cursor: pointer;
+    }
+    .banner h1 {
+        z-index: 999;
+    }
+    .hotelPage__servicesBox .iconBox{
+        display: none;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        function getAjaxNews() {
+            var data = $(".newsPage__box form").serialize();
+            $(".container-updated-by-ajax").append('<div class="ajax-loading"><div class="ajax-loading-shadow"></div><div class="ajax-loading-spinner"></div></div>');
+            $.post("/include/functions.php", {action:"get_ajax_news", data:data}, function(response) {
+                if (response.length) {
+                    $(".ajax-loading").remove();
+                    $(".container-updated-by-ajax").html(response);
+                    $(".newsPage__pagination a").each(function() {
+                        var href = $(this).attr("href");
+                        href = str_replace2("/include/functions.php", "/news/", href);
+                        $(this).attr("href", href);
+                    });
+                }
+            });
+        }
+
+        $('body').on('click', '.newsPage__item', function(){
+            window.location = $(this).find('h3 a').attr('href');
+            return false;
+        });
+
+        $(document).on("mouseup", ".newsPage__filterCat label", function() {
+            var this_form = $(this).parents("form");
+            setTimeout(function() {
+                getAjaxNews();
+            }, 100);
+        });
+
+        $("[name=date1], [name=date2]").change(function() {
+            getAjaxNews();
+        });
+
+        $(".newsPage__box form").submit(function() {
+            getAjaxNews();
+            return false;
+        });
+
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top-40
+            }, 500);
+        });
+
+        $("#subscribe").submit(function() {
+            var this_form = $(this);
+            var email = this_form.find("[name=email]").val();
+            $.post("/include/functions.php", {action:"subscribe", email:email}, function(response) {
+                if (response.length) {
+                    alert("Вы успешно подписаны на рассылку!");
+                    this_form.find("[name=email]").val("");
+                }
+            });
+            return false;
+        });
+
+    });
+
+    function str_replace2 ( search, replace, subject ) {
+        if(!(replace instanceof Array)){
+            replace=new Array(replace);
+            if(search instanceof Array){
+                while(search.length>replace.length){
+                    replace[replace.length]=replace[0];
+                }
+            }
+        }
+        if(!(search instanceof Array))search=new Array(search);
+        while(search.length>replace.length){
+            replace[replace.length]='';
+        }
+        if(subject instanceof Array){
+            for(k in subject){
+                subject[k]=str_replace(search,replace,subject[k]);
+            }
+            return subject;
+        }
+        for(var k=0; k<search.length; k++){
+            var i = subject.indexOf(search[k]);
+            while(i>-1){
+                subject = subject.replace(search[k], replace[k]);
+                i = subject.indexOf(search[k],i);
+            }
+        }
+        return subject;
+
+    }
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113151215-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113151215-1');
+</script>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter47153442 = new Ya.Metrika({
+                    id:47153442,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/47153442" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+</body>
+</html>

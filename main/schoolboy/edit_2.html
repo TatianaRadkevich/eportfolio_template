@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+<title>E-PORTFOLIO</title>
+<meta charset="UTF-8">
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../css/bootstrap.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../css/w3.css">
+<link rel="stylesheet" href="../../css/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='../../css/familyOpenSans.css'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-margin-left w3-hover-white w3-large w3-theme-d2" ><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large  my_news_main" style="margin-left: 15%"><i class="fa fa-book w3-margin-right "></i>E-PORTFOLIO</a>
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Новости"><i class="fa fa-globe"></i></a>-->
+        <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_prof_main" title="Профиль"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my_setting_main" title="Настройки"><i class="fa fa-cog "></i></a>-->
+
+
+
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_news_main">Новости</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_prof_main">Профиль</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large my_setting_main">Настройки</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-col m3">
+
+
+        <!-- Accordion -->
+
+        <div class="w3-card w3-round w3-white">
+            <div class="w3-container">
+                <div class="row">
+                    <div class="container" style="text-align: center; padding: 15px">
+                        <button class="btn w3-large" style="height: 100%; white-space: pre-line" id="preview_btn_menu_profile"><span class="w3-xxxlarge fa fa-eye"></span> <br>Предварительный<br>просмотр</button>
+                    </div>
+                </div>
+
+                <!--<div class="row">
+                    <div class="container" style="text-align: center; padding: 15px">
+                        <button onclick="myFunction('in_pdf_block')" class="btn w3-large" style="white-space: pre-line" id="pdf_btn_menu_profile"><span class="far fa-file-pdf"></span> Поделиться в pdf</button>
+
+                        <div id="in_pdf_block" class="w3-hide w3-container">
+                            <div class="row" style="text-align: center">
+                                <div class="w3-opacity" >
+                                    <div class="w3-xlarge">
+                                        <i class="fab fa-google w3-hover-opacity"></i>
+                                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                                        <i class="fab fa-vk w3-hover-opacity"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+-->
+
+                <div class="row">
+                    <div class="container" style="text-align: center; padding: 15px">
+                        <button class="btn w3-large w3-green" style="height: 100%; white-space: pre-line" id="login_btn_menu_profile"><span class="fas fa-sign-in-alt"></span> Войти в профиль</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Left Column -->
+    </div>
+        <!-- Middle Column -->
+        <div class="w3-col m9">
+            <div class="w3-row-padding">
+                <div class="w3-col m12">
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container w3-padding">
+                            <div class="row">
+                                <div class="col-lg-2"><button class="btn w3-teal-edit" style="width: 100%; height: 100%; white-space: pre-line" id="basic_btn_menu_profile"><span class="fa fa-user"></span><br> Базовая информация</button></div>
+                                <div class="col-lg-2"><button class="btn" style="width: 100%; height: 100%; white-space: pre-line" id="edu_btn_menu_profile"><span class="fa fa-university"></span><br><br>Образование</button></div>
+                                <div class="col-lg-2"><button class="btn" style="width: 100%; height: 100%; white-space: pre-line" id="interesting_btn_menu_profile"><span class="fa fa-heart"></span><br>Навыки и интересы</button></div>
+                                <div class="col-lg-2"><button class="btn" style="width: 100%; height: 100%; white-space: pre-line" id="progress_btn_menu_profile"><span class="fa fa-crown"></span><br><br>Достижения</button></div>
+                                <div class="col-lg-2"><button class="btn" style="width: 100%; height: 100%; white-space: pre-line" id="goal_btn_menu_profile"><span class="fa fas fa-chart-line"></span><br><br>Цели</button></div>
+                                <div class="col-lg-2"><button class="btn" style="width: 100%; height: 100%; white-space: pre-line" id="settings_btn_menu_profile"><span class="fa fa-cog"></span><br><br>Настройки</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin w3-padding-16" id="basic_div_menu_profile"><br>
+                <!--<img src="../../img/tmp/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-right w3-opacity">1 min</span>-->
+
+                <h3>Базовая информация</h3>
+
+                <hr class="forhr">
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>e-mail*</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="e-mail-prof" class="form-control">
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Пароль*</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input type="password" id="pass-prof" class="form-control">
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Повторите пароль*</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input type="password" id="pass-2-prof" class="form-control">
+                    </div>
+                </div>
+
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Фотография</label>
+                    </div>
+                    <div class="col-lg-9">
+
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Имя*</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="name-prof" class="form-control">
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Фамилия*</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="lastname-prof" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Отчество*</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="fathername-prof" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Мобильный</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input id="tele-prof" class="form-control">
+                    </div>
+                </div>
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Регион*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="region-select"></select>
+                    </div>
+
+                    <div class="col-lg-1">
+                        <label>Город*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="town-select"></select>
+                    </div>
+                </div>
+                <!--<div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Год рождения</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <select id="d-prof">
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>
+                        <select id="m-prof">
+                            <option>январь</option>
+                            <option>февраль</option>
+                            <option>март</option>
+                            <option>апрель</option>
+                            <option>май</option>
+                            <option>июнь</option>
+                            <option>июль</option>
+                            <option>август</option>
+                            <option>сентябрь</option>
+                            <option>октябрь</option>
+                            <option>ноябрь</option>
+                            <option>декабрь</option>
+                        </select>
+                        <select id="y-prof">
+                            <option>1991</option>
+                            <option>1992</option>
+                            <option>1993</option>
+                            <option>1994</option>
+                            <option>1995</option>
+                            <option>1996</option>
+                        </select>
+                    </div>
+                </div>-->
+
+                <!--<div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>О себе</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="about-us-prof"></textarea>
+                    </div>
+                </div>-->
+
+                <!--<div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>аккаунты в соц сетях</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <label>+Добавить аккаунт</label>
+                    </div>
+                </div>-->
+                <br>
+                <div class="row top-1">
+                    <div class="col-lg-9">
+                    <label><input type="checkbox" id="basic_checkbox_menu_profile">  Согласен на обработку своих персональных данных</label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: right">
+                    <button class="btn btn-danger" id="basic_btn_save_menu_profile">Сохранить</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin w3-padding-16 display-none" id="edu_div_menu_profile"><br>
+                <!--<img src="../../img/tmp/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-right w3-opacity">1 min</span>-->
+
+                    <!--<img src="../../img/tmp/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                    <span class="w3-right w3-opacity">1 min</span>-->
+                    <h3>Образование</h3>
+
+                    <hr class="forhr">
+
+                    <!--<div class="row top-1">
+                        <div class="col-lg-1">
+                            <label>Регион</label>
+                        </div>
+                        <div class="col-lg-3">
+                            <select class="form-control" id="region-select-obr-0"></select>
+                        </div>
+                        <div class="col-lg-1">
+                            <label>Район</label>
+                        </div>
+                        <div class="col-lg-3">
+                            <select class="form-control" id="raion-select-obr-0"></select>
+                        </div>
+                        <div class="col-lg-1">
+                            <label>Город</label>
+                        </div>
+                        <div class="col-lg-3">
+                            <select class="form-control" id="town-select-obr-0"></select>
+                        </div>
+                    </div>-->
+
+                    <div class="row top-1">
+                        <div class="col-lg-3">
+                            <label>Учреждение образования*</label>
+                        </div>
+                        <div class="col-lg-9">
+                            <select class="form-control" id="education-select-0"></select>
+                        </div>
+                    </div>
+
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Регион*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="region-select-obr-0"></select>
+                    </div>
+
+                    <div class="col-lg-1">
+                        <label>Город*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="town-select-obr-0"></select>
+                    </div>
+                </div>
+
+                    <div class="row top-1">
+                        <div class="col-lg-3">
+                            <label>Год поступления*</label>
+                        </div>
+                        <div class="col-lg-3">
+                            <select class="form-control" id="education-start-select-0"></select>
+                        </div>
+                        <div class="col-lg-3">
+                            <label>Год окончания</label>
+                        </div>
+                        <div class="col-lg-3">
+                            <select class="form-control" id="education-finish-select-0"></select>
+                        </div>
+                    </div>
+
+                    <!--<div class="row top-1">
+                        <div class="col-lg-3">
+                            <label>Специализация</label>
+                        </div>
+                        <div class="col-lg-9">
+                            <select class="form-control" id="education-spec-0"></select>
+                        </div>
+                    </div>
+-->
+                    <div class="row top-1">
+                        <div class="col-lg-3">
+                            <label>Документ (аттестат)</label>
+                        </div>
+                        <div class="col-lg-9">
+                            <label>+Добавить документ</label>
+                        </div>
+                    </div>
+                <br>
+                <div class="row top-1">
+                    <div class="col-lg-9">
+                        <label><input type="checkbox" id="edu_checkbox_menu_profile">  Согласен на обработку своих персональных данных</label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: right">
+                        <button class="btn btn-danger" id="edu_btn_save_menu_profile">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin w3-padding-16 display-none" id="progress_div_menu_profile"><br>
+
+                <h3>Достижения (участие в олимпиадах, конкурсах, соревнованиях, других мероприятиях)</h3>
+
+                <hr class="forhr">
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Название олимпиады/мероприятия/достижения</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input class="form-control" id="name-olimp-select-0">
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Предмет участия в олимпиаде</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <select class="form-control" id="subject-select-olimp-0"></select>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Год</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input class="form-control" id="olimp-start-0"/>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Место проведения</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input class="form-control" id="place-olimp-0">
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Организатор</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input class="form-control" id="organiz-olimp-0">
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Результат</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="res-olimp-0"></textarea>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Документ/сертификат/диплом/грамота</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <label>+Добавить документ</label>
+                    </div>
+                </div>
+                <br>
+                <div class="row top-1">
+                    <div class="col-lg-9">
+                        <label><input type="checkbox" id="progress_checkbox_menu_profile">  Согласен на обработку своих персональных данных</label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: right">
+                        <button class="btn btn-danger" id="progress_btn_save_menu_profile">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin w3-padding-16 display-none" id="interesting_div_menu_profile"><br>
+
+                <h3>Навыки и интересы</h3>
+
+                <hr class="forhr">
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>О себе</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="about-us-interesting-0"></textarea>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Навыки и компетенции</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="competation-interesting-0"></textarea>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Проектная деятельность</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" id="project-interesting"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row top-1">
+                    <div class="col-lg-9">
+                        <label><input type="checkbox" id="interesting_checkbox_menu_profile">  Согласен на обработку своих персональных данных</label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: right">
+                        <button class="btn btn-danger" id="interesting_btn_save_menu_profile">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin w3-padding-16 display-none" id="goal_div_menu_profile"><br>
+
+                <h3>Цели</h3>
+
+                <hr class="forhr">
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Поступить в ВУЗ</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <select class="form-control" id="education-goal-select-0"></select>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Поступить в на факультет</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <input class="form-control" id="facult-goal-inp-0">
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Мотивационное письмо в приемную комиссию
+                            Короткий рассказ в свободной форме о том, почему вы выбрали этот ВУЗ (до 3000 знаков) и что делаете для того, чтобы поступить в него
+                        </label>
+                    </div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" style="min-height: 100%" id="my-education-goal-0"></textarea>
+                    </div>
+                </div>
+
+                <br>
+                <div class="row top-1">
+                    <div class="col-lg-9">
+                        <label><input type="checkbox" id="goal_checkbox_menu_profile">  Согласен на обработку своих персональных данных</label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: right">
+                        <button class="btn btn-danger" id="goal_btn_save_menu_profile">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin w3-padding-16 display-none" id="settings_div_menu_profile"><br>
+
+                <h3>Настройки</h3>
+
+                <hr class="forhr">
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Авторизация через соцсети</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="w3-opacity" >
+                            <div class="w3-xlarge">
+                                <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+                                <i class="fa fa-instagram w3-hover-opacity"></i>
+                                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                                <i class="fab fa-twitter w3-hover-opacity"></i>
+                                <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+                                <i class="fab fa-google w3-hover-opacity"></i>
+                                <i class="fab fa-twitter w3-hover-opacity"></i>
+                                <i class="fab fa-vk w3-hover-opacity"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Настройки доступа</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <select id="access_settings" class="form-control">
+                            <option id="select_access_setting_1">Видно всем</option>
+                            <option id="select_access_setting_2">Видно ВУЗу</option>
+                            <option id="select_access_setting_3">Видно только мне</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="display-none" id="selected_edu_setting">
+                    <div class="row top-1">
+                    <div class="col-lg-3">
+                        <label>Выберите вуз</label>
+                    </div>
+                    <div class="col-lg-9">
+                        <select id="access_edu_settings" class="form-control">
+                        </select>
+                    </div>
+                    </div>
+                </div>
+
+
+
+                <br>
+                <div class="row top-1">
+                    <div class="col-lg-9">
+                        <label><input type="checkbox" id="settings_checkbox_menu_profile">  Согласен на обработку своих персональных данных</label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: right">
+                        <button class="btn btn-danger" id="settings_btn_save_menu_profile">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Middle Column -->
+        </div>
+
+        <!-- Right Column -->
+       <!-- <div class="w3-col m1">
+            <div class="w3-card w3-round w3-white w3-center">
+                <div class="w3-container">
+                    <button class="btn" style="width: 100%; height: 100%; white-space: pre-line" id="preview_btn_menu_profile">Просмотр</button>
+
+                </div>
+            </div>-->
+
+
+        <!--<div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+            <p>ADS</p>
+        </div>
+        <br>
+
+        <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+            <p><i class="fa fa-bug w3-xxlarge"></i></p>
+        </div>-->
+
+        <!-- End Right Column -->
+   <!-- </div>-->
+
+    <!-- End Grid -->
+</div>
+
+<!-- End Page Container -->
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+    <h5>Footer</h5>
+</footer>
+
+
+<script>
+    // Accordion
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme-d1";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        }
+    }
+
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    $("#logout").click(function () {
+        document.location.href = "../../index.html";
+    })
+
+    $(".my_prof_main").click(function () {
+        document.location.href = "profile.html";
+    })
+
+    $(".my_news_main").click(function () {
+        document.location.href = "main.html";
+    })
+
+    $(".my_setting_main").click(function () {
+        document.location.href = "schoolboy_settings.html";
+    })
+
+    $(".my_all_vyz_main").click(function () {
+        document.location.href = "../../oldVersion/schoolboy_vyz.html";
+    })
+
+    $("#basic_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("basic_div_menu_profile")
+    })
+
+    $("#edu_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("edu_div_menu_profile")
+    })
+
+    $("#progress_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("progress_div_menu_profile")
+    })
+
+    $("#interesting_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("interesting_div_menu_profile")
+    })
+
+    $("#goal_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("goal_div_menu_profile")
+    })
+
+    $("#settings_btn_menu_profile").click(function () {
+        setAllDivDispNon()
+        $(".btn").removeClass("w3-teal-edit")
+        $(this).addClass("w3-teal-edit")
+        removeClassNone("settings_div_menu_profile")
+    })
+
+    function setAllDivDispNon() {
+        $("#basic_div_menu_profile").addClass("display-none")
+        $("#edu_div_menu_profile").addClass("display-none")
+        $("#goal_div_menu_profile").addClass("display-none")
+        $("#interesting_div_menu_profile").addClass("display-none")
+        $("#progress_div_menu_profile").addClass("display-none")
+        $("#settings_div_menu_profile").addClass("display-none")
+    }
+
+    function removeClassNone(id) {
+        $("#"+id).removeClass("display-none")
+    }
+
+    $("#access_settings").change(function () {
+        if($(this).children(":selected").prop("id").split("_")[3] == "2"){
+            $("#selected_edu_setting").removeClass("display-none")
+        }else{
+            $("#selected_edu_setting").addClass("display-none")
+        }
+    })
+
+    $("#login_btn_menu_profile").click(function () {
+        var email = $("#e-mail-prof").val(),
+            pass = $("#pass-prof").val(),
+            pass2 = $("#pass-2-prof").val();
+        if(pass != pass2){
+            alert("Пароли не совпарают")
+        }else{
+            if(email.length == 0 || pass.length == 0){
+                alert("вы не заполнили обязательные поля")
+            }else{
+                document.location.href = "main.html";
+            }
+        }
+
+    })
+
+    $("#preview_btn_menu_profile").click(function () {
+        document.location.href = "profile.html";
+    })
+</script>
+
+</body>
+</html>

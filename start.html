@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+
+</head>
+<body>
+<div class="container">
+<div class="row">
+
+    <div class="col-lg-10">
+        <button style="width: 100%" id="schoolboy" class="btn btn-outline-info my-2">Школьник/родитель</button>
+    </div>
+
+    <div class="col-lg-10">
+        <button style="width: 100%" id="high_school" class="btn btn-outline-info my-2">ВУЗ</button>
+    </div>
+
+    <div class="col-lg-10">
+        <button style="width: 100%" id="ministry" class="btn btn-outline-info my-2">Министерство</button>
+    </div>
+
+    <div class="col-lg-10">
+        <button style="width: 100%" id="school" class="btn btn-outline-info my-2">Школа</button>
+    </div>
+</div>
+</div>
+<script>
+    $("#schoolboy").click(function () {
+        document.location.href = "main/schoolboy/main.html";
+    })
+
+    $("#high_school").click(function () {
+        document.location.href = "main/university/main.html";
+    })
+
+</script>
+</body>
+</html>

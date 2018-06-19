@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<title>E-PORTFOLIO</title>
+<meta charset="UTF-8">
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<link rel="stylesheet" href="css/bootstrap-reboot.css">
+
+
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/familyLato.css">
+<link rel="stylesheet" href="css/familyMontserrat.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    /*.fa-anchor,.fa-coffee {font-size:100px}*/
+
+
+    .panel-heading {
+        padding: 25px;
+        height: 220px;
+        border-bottom: 1px solid;
+    }
+
+
+</style>
+<body>
+
+<!--<i class="fab fa-google w3-hover-opacity"></i>
+<i class="fab fa-twitter w3-hover-opacity"></i>
+<i class="fab fa-vk w3-hover-opacity"></i>-->
+
+<nav class="w3-sidebar-2 w3-bar-block w3-small w3-hide-small w3-center" style="background-color: #0000004d; color: white">
+    <!-- Avatar image in top left corner -->
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black-a">
+        <!--<i class="fab fa-google w3-large"></i>-->
+        <i class="fab fa-facebook-square w3-large"></i>
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black-a">
+        <i class="fab fa-twitter w3-large"></i>
+    </a>
+    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black-a">
+        <i class="fab fa-vk w3-large"></i>
+    </a>
+</nav>
+
+
+<!-- Navbar -->
+<!--<div class="w3-top">
+    <div class="w3-bar w3-my-blue w3-card w3-right-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#aa" class="w3-bar-item w3-button w3-padding-large w3-white">Электронное портфолио</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Портфолио</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">ВУЗы</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Мероприятия</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">О проекте</a>
+        &lt;!&ndash;<button id="login" data-toggle="modal" class="btn" data-target="#login_modal" style="margin: 5px;">Вход</button>
+        <button id="registration" data-toggle="modal" class="btn"  data-target="#reg_modal" style="margin: 5px;">Регистрация</button>&ndash;&gt;
+    </div>
+
+    &lt;!&ndash; Navbar on small screens &ndash;&gt;
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Портфолио</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">ВУЗы</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Мероприятия</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">О проекте</a>
+        &lt;!&ndash;<button id="login" data-toggle="modal" data-target="#login_modal">Вход</button>
+        <button id="registration" data-toggle="modal" data-target="#reg_modal">Регистрация</button>&ndash;&gt;
+    </div>
+</div>-->
+
+<!-- Header -->
+<header class="w3-container w3-center w3-my-blue" style="padding:128px 16px; height: 700px">
+    <div style=" min-height: 100%; background-size: cover;" class="w3-my-blue">
+    <div style="top:0; position:absolute; min-width: 90%">
+    <div class=" w3-my-blue w3-right-align w3-large">
+        <div class="row">
+            <div class="col-lg-9">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#aa" class="w3-bar-item w3-button w3-padding-large w3-white">Электронное портфолио</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Портфолио</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">ВУЗы</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Мероприятия</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">О проекте</a>
+            </div>
+            <div class="col-lg-3">
+        <button id="login" data-toggle="modal" class="btn" data-target="#login_modal"><i class="fas fa-sign-in-alt"></i>Вход</button>
+            </div>
+        <!--<button id="login" data-toggle="modal" class="btn" data-target="#login_modal" style="margin: 5px;">Вход</button>
+        <button id="registration" data-toggle="modal" class="btn"  data-target="#reg_modal" style="margin: 5px;">Регистрация</button>-->
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Портфолио</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">ВУЗы</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Мероприятия</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">О проекте</a>
+        <!--<button id="login" data-toggle="modal" data-target="#login_modal">Вход</button>
+        <button id="registration" data-toggle="modal" data-target="#reg_modal">Регистрация</button>-->
+    </div>
+
+    </div>
+    <h1 class="w3-margin w3-jumbo">О твоих успехах узнают!</h1>
+        <br>
+        <br>
+    <h2 class="w3-margin">Создай своё портфолио достижений</h2>
+<!--    <p class="w3-xlarge">Template by w3.css</p>-->
+        <br>
+        <br>
+        <br>
+    <button class="w3-button w3-white w3-padding-large w3-large w3-margin-top btn create_portfolio_index">Создать портфолио</button>
+    </div>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-16 w3-container" style="background-color: #0e3e56">
+    <div class="w3-content" style="padding-top: 3%; background-color: #0e3e56">
+        <div class="w3-center">
+            <div class="row">
+                <div class="col-lg-4">
+                    <i class="w3-xxxlarge fa fa-id-card my-text-blue"></i>
+                    <br>
+                    <h3 class="tex-color-white">Портфолио</h3>
+                    <h3 class="tex-color-white">123</h3>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fa fa-university my-text-blue w3-xxxlarge"></i>
+                    <br>
+                    <h3 class="tex-color-white">Вузов</h3>
+                    <h3 class="tex-color-white">234</h3>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fas fa-graduation-cap my-text-blue w3-xxxlarge"></i>
+                    <br>
+                    <h3 class="tex-color-white">Олимпиад</h3>
+                    <h3 class="tex-color-white">311</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+
+    <div class="w3-content w3-center">
+                <h1>Вузы</h1>
+        <div class="row">
+            <div class="item-main" style="background: url(img/univer/22d36b9d94.jpg) center no-repeat;">
+                <h3 style="color: white; margin-top:25%">Российский государственный Сочинский университет</h3>
+            </div>
+
+
+            <div class="item-main" style="background: url(img/univer/1.jpg) center no-repeat;">
+                <h3 style="color: white; margin-top:25%">Российский государственный Сочинский университет</h3>
+            </div>
+
+
+            <div class="item-main" style="background: url(img/univer/01402812.jpg) center no-repeat;">
+                <h3 style="color: white; margin-top:25%">Российский государственный Сочинский университет</h3>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="item-main" style="background: url(img/univer/b2cdbf227b517ca3cea739da71074db3.jpg) center no-repeat;">
+                <h3 style="color: white; margin-top:25%">Российский государственный Сочинский университет</h3>
+            </div>
+
+
+            <div class="item-main" style="background: url(img/univer/edurus_ru_sochgu-300x199.jpg) center no-repeat;">
+                <h3 style="color: white; margin-top:25%">Российский государственный Сочинский университет</h3>
+            </div>
+
+
+            <div class="item-main" style="background: url(img/univer/gallery_promo345694.jpg) center no-repeat;">
+                <h3 style="color: white; margin-top:25%">Российский государственный Сочинский университет</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div class="w3-container w3-black-opacity w3-center w3-padding-64">
+    <h1>Мероприятия</h1>
+
+
+    <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+            <img src="img/olimp/1.jpg" alt="Norway" style="width:100%;     height: 325px;" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <h4><b>Олимпиада 1</b></h4>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                <p style="text-align: left"><i class="fas fa-map-marker-alt"></i> Москва, ул. Мира 16</p>
+                <hr class="forhr">
+                <p style="text-align: left"><i class="far fa-calendar-alt"></i> 15.05.18-19.05.18</p>
+            </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+            <img src="img/olimp/6.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <h4><b>Олимпиада 2</b></h4>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                <p style="text-align: left"><i class="fas fa-map-marker-alt"></i> Москва, ул. Мира 16</p>
+                <hr class="forhr">
+                <p style="text-align: left"><i class="far fa-calendar-alt"></i> 15.05.18-19.05.18</p>
+            </div>
+        </div>
+        <div class="w3-third w3-container">
+            <img src="img/olimp/7.jpg" alt="Norway" style="width:100%; height: 325px" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <h4><b>Олимпиада 3</b></h4>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                <p style="text-align: left"><i class="fas fa-map-marker-alt"></i> Москва, ул. Мира 16</p>
+                <hr class="forhr">
+                <p style="text-align: left"><i class="far fa-calendar-alt"></i> 15.05.18-19.05.18</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Second Grid -->
+<div class="w3-center w3-padding-64 w3-container">
+    <h1>О проекте</h1>
+    <div class="w3-content">
+            <div class="row">
+                <div class="col-lg-2 w3-padding-16">
+                    <label class="w3-large">Как мы сделали это<br><span class="w3-xxxlarge fas fa-arrow-right"></span></label>
+                </div>
+                <div class="col-lg-6">
+                    <video width="400" height="300" controls="controls" poster="img/tmp/mountains.jpg">
+                        <source src="video/videoplayback.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        Тег video не поддерживается вашим браузером.
+                        <a href="video/videoplayback.mp4">Скачайте видео</a>.
+                    </video>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row w3-padding-16">
+                        <div class="btn-group">
+                            <button type="button" class="btn">Создавай<br>портфолио </button>
+                            <button type="button" class="btn" style="font-size: 2rem">
+                                <span>1</span>
+                            </button>
+                            </div>
+                    </div>
+                    <div class="row  w3-padding-16">
+                        <div class="btn-group">
+                            <button type="button" class="btn">Учавствуй<br>в мероприятиях </button>
+                            <button type="button" class="btn" style="font-size: 2rem">
+                                <span>2</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row  w3-padding-16">
+                        <div class="btn-group">
+                            <button type="button" class="btn">Делись<br>своими успехами </button>
+                            <button type="button" class="btn" style="font-size: 2rem">
+                                <span>3</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row  w3-padding-16">
+                            <button type="button" class="btn create_portfolio_index w3-my-blue-2">Создать портфолио  <span class="fa fa-angle-right"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity" >
+    <div class="row">
+    <div class="col-lg-4">
+        <label>E-PORTFOLIO</label>
+        </div>
+    <div class="col-lg-4">
+        <label>Подпишись</label>
+    </div>
+    <div class="col-lg-4">
+    <div class="w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fab fa-twitter w3-hover-opacity"></i>
+        <i class="fab fa-vk w3-hover-opacity"></i>
+    </div>
+    </div>
+    </div>
+    <!--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
+</footer>
+
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+
+
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLongTitle_add"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="login_modal_title">Войти</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="login_modal_body">
+                <label>Введите адрес электронной почты</label>
+                <input class="form-control" id="email_modal_inp_l">
+                <label>Введите пароль</label>
+                <input class="form-control" type="password" id="pass_modal_inp_l">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" id="login_modal_save">Вход
+                </button>
+            </div>
+
+            <div class="modal-content container" style="text-align: left">
+                <label>Войти, используя социальные сети</label>
+                <div class="w3-opacity w3-padding-16" >
+                    <div class="w3-xlarge">
+                        <!--<i class="fab fa-google w3-hover-opacity"></i>-->
+                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                        <i class="fab fa-vk w3-hover-opacity"></i>
+                        <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+                        <i class="fa fa-instagram w3-hover-opacity"></i>
+                        <i class="fa fa-snapchat w3-hover-opacity"></i>
+                        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                        <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="reg_modal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLongTitle_add"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reg_modal_title">Регистрация</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="reg_modal_body">
+                <label>Введите адрес электронной почты</label>
+                <input class="form-control" id="email_modal_inp_r">
+                <label>Введите пароль</label>
+                <input class="form-control" type="password" id="pass_modal_inp_r">
+                <label>Повторите пароль</label>
+                <input class="form-control" type="password" id="pass2_modal_inp_r">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary"  id="reg_modal_save">Зарегистрироваться
+                </button>
+            </div>
+            <div class="modal-content container" style="text-align: left">
+                <label>Войти, используя социальные сети</label>
+                <div class="w3-opacity w3-padding-16" >
+                    <div class="w3-xlarge">
+                        <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+                        <i class="fa fa-instagram w3-hover-opacity"></i>
+                        <i class="fa fa-snapchat w3-hover-opacity"></i>
+                        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                        <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+                        <i class="fab fa-google w3-hover-opacity"></i>
+                        <i class="fab fa-twitter w3-hover-opacity"></i>
+                        <i class="fab fa-vk w3-hover-opacity"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $("#login_modal_save").click(function () {
+        var mail = $("#email_modal_inp_l").val(),
+            pass = $("#pass_modal_inp_l").val();
+        if(mail == "ivanova.t.a@gmail.com" && pass == "123"){
+            document.location.href = "main/schoolboy/main.html";
+        } else if(mail == "info@rector.msu.ru" && pass == "123"){
+            document.location.href = "main/university/main.html";
+        } else{
+            alert("Вы ввели не верный логин и/или пароль")
+        }
+    })
+
+    $("#reg_modal_save").click(function () {
+        var pass1 = $("#pass_modal_inp_r").val();
+        var pass2 = $("#pass2_modal_inp_r").val();
+        if(pass1!=pass2){
+            alert("Пароли не совпадают!")
+        }else{
+            alert("пароли совпадают")
+            document.location.href = "start.html";
+        }
+    })
+
+    $(".create_portfolio_index").click(function () {
+        document.location.href = "main/schoolboy/edit_2.html";
+    })
+</script>
+</body>
+</html>
